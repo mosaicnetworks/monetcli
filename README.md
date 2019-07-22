@@ -54,8 +54,14 @@ monet --datadir [path] interactive
 ## Data Directory
 
 The first time `monet` runs, and if no options are specified, it creates a
-special directory in a default location (`~/.monet` on Linux and Mac), where it
-stores any relevant information. In particular, this directory contains the
+special directory in a default location where it
+stores any relevant information.
+
+-   Windows: `~/AppData/Roaming/Monet`
+-   Mac OS: `~/Library/Monet`
+-   Linux: `~/.monet`
+
+In particular, this directory contains the
 following items:
 
 -   **wallet.toml**: where global options are specified. These values may be

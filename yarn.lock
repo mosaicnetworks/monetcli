@@ -1377,10 +1377,10 @@ ethjs-unit@^0.1.6:
     bn.js "4.11.6"
     number-to-bn "1.7.0"
 
-evm-lite-cli@^1.0.0-alpha.18:
-  version "1.0.0-alpha.18"
-  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.0.0-alpha.18.tgz#804eb66479fbbcb1e9924f8625acb30497d756a1"
-  integrity sha512-3lXn1Y/Nb+N8y48lVNgcOI2Gy/8zL8AvG5ZpWTFQzyoch325Vhp15rSWbCAOaPxeqxhF0+1Bwd59dM6HMsTPWA==
+evm-lite-cli@^1.0.0-alpha.19:
+  version "1.0.0-alpha.19"
+  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.0.0-alpha.19.tgz#d1cf2bf54b28360ca9d97702bb959090b0990bf5"
+  integrity sha512-OrfW0AfbDHI+HTykvubZ65HHh1yrw/8JB+64S0WHX/AEdDQN9cd1B5t/FGCadg3AM4aDIGXhRToFQC6tF9LArw==
   dependencies:
     ascii-table "^0.0.9"
     chalk "^2.4.2"

@@ -57,8 +57,8 @@ The first time `monet` runs, and if no options are specified, it creates a
 special directory in a default location where it
 stores any relevant information.
 
--   Windows: `~/AppData/Roaming/Monet`
--   Mac OS: `~/Library/Monet`
+-   Windows: `~/AppData/Roaming/MONET`
+-   Mac OS: `~/Library/MONET`
 -   Linux: `~/.monet`
 
 **This directory is also shared by [`monetd`](https://github.com/mosaicnetworks/monetd).**

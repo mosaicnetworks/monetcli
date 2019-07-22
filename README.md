@@ -61,14 +61,14 @@ stores any relevant information.
 -   Mac OS: `~/Library/Monet`
 -   Linux: `~/.monet`
 
+**This directory is also shared by [`monetd`](https://github.com/mosaicnetworks/monetd).**
+
 In particular, this directory contains the
 following items:
 
 -   **wallet.toml**: where global options are specified. These values may be
     overwritten by CLI flags.
 -   **keystore**: where all encrypted account keys are stored.
-
-**This directory is also shared by [`monetd`](https://github.com/mosaicnetworks/monetd).**
 
 ### `wallet.toml`
 

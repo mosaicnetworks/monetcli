@@ -459,9 +459,9 @@ acorn@^5.5.3:
   integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
 
 acorn@^6.0.1:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.2.0.tgz#67f0da2fc339d6cfb5d6fb244fd449f33cd8bbe3"
-  integrity sha512-8oe72N3WPMjA+2zVG71Ia0nXZ8DpQH+QyyHO+p06jT8eg8FGG3FbcUIi8KziHlAfheJQZeoqbvq1mQSQHXKYLw==
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.2.1.tgz#3ed8422d6dec09e6121cc7a843ca86a330a86b51"
+  integrity sha512-JD0xT5FCRDNyjDda3Lrg/IxFscp9q4tiYtxE1/nOzlKCk7hIRuYjhq1kCNkbPjMRMZuFq20HNQn1I9k8Oj0E+Q==
 
 ajv@^6.5.5:
   version "6.10.2"
@@ -639,10 +639,11 @@ babel-jest@^24.8.0:
     slash "^2.0.0"
 
 babel-plugin-istanbul@^5.1.0:
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/babel-plugin-istanbul/-/babel-plugin-istanbul-5.1.4.tgz#841d16b9a58eeb407a0ddce622ba02fe87a752ba"
-  integrity sha512-dySz4VJMH+dpndj0wjJ8JPs/7i1TdSPb1nRrn56/92pKOF9VKC1FMFJmMXjzlGGusnCAqujP6PBCiKq0sVA+YQ==
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-istanbul/-/babel-plugin-istanbul-5.2.0.tgz#df4ade83d897a92df069c4d9a25cf2671293c854"
+  integrity sha512-5LphC0USA8t4i1zCtjbbNb6jJj/9+X6P37Qfirc/70EQ34xKlMW+a1RHGwxGI+SwWpNwZ27HqvzAobeqaXwiZw==
   dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
     find-up "^3.0.0"
     istanbul-lib-instrument "^3.3.0"
     test-exclude "^5.2.3"
@@ -1376,33 +1377,33 @@ ethjs-unit@^0.1.6:
     bn.js "4.11.6"
     number-to-bn "1.7.0"
 
-evm-lite-cli@^1.0.0-alpha.16:
-  version "1.0.0-alpha.16"
-  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.0.0-alpha.16.tgz#740b9e80312892181391a1ef34fdebd1b85c073b"
-  integrity sha512-y7BUdkNI3+pfXQH87SdZgfYZ7UDwvxLDV0IqYiSQ5VSsEahFsZtpw8DZEcxIN9hLAWuDbd1bLNbolqxvSIpFnQ==
+evm-lite-cli@^1.0.0-alpha.17:
+  version "1.0.0-alpha.17"
+  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.0.0-alpha.17.tgz#f1e3186aec6fbba324d854b9d0ca9904263df81c"
+  integrity sha512-dwSfL8GzyF7o2/v3NcInTSvqi4qcFXp94qnLoeAliGM1rBH8wBsxHVQIqldA7CeMMtbjuPmd3entMmKCvbp+WA==
   dependencies:
     ascii-table "^0.0.9"
     chalk "^2.4.2"
     dotenv "^8.0.0"
-    evm-lite-core "1.0.0-alpha.14"
-    evm-lite-datadir "1.0.0-alpha.14"
-    evm-lite-keystore "1.0.0-alpha.14"
-    evm-lite-utils "1.0.0-alpha.14"
+    evm-lite-core "1.0.0-alpha.15"
+    evm-lite-datadir "1.0.0-alpha.15"
+    evm-lite-keystore "1.0.0-alpha.15"
+    evm-lite-utils "1.0.0-alpha.15"
     figlet "^1.2.3"
     inquirer "^6.4.1"
     mkdirp "^0.5.1"
     vorpal "^1.12.0"
 
-evm-lite-core@1.0.0-alpha.14, evm-lite-core@^1.0.0-alpha.14:
-  version "1.0.0-alpha.14"
-  resolved "https://registry.yarnpkg.com/evm-lite-core/-/evm-lite-core-1.0.0-alpha.14.tgz#f0d7fb3fe99cc1af4f6d4bced109d4e8512671ee"
-  integrity sha512-IylpDRqHQxA3wphVm2f/6aRMfHmKn304Lfn2V13SfXwOUkgjABPXRGh05f4CxiD+4tbggQuqm1HrFzLMH2nhfg==
+evm-lite-core@1.0.0-alpha.15, evm-lite-core@^1.0.0-alpha.15:
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/evm-lite-core/-/evm-lite-core-1.0.0-alpha.15.tgz#f9ef3ec0467d66ba2982c56ff3f78819088b71ba"
+  integrity sha512-rZwOgoPN6s5OetFPBdQeRfKC5iZBrxFJimz6ZD7U5sZOS7F3XRxXHFKePTZzfuxzzsPLUx+akZ9KoI8fSmIGRQ==
   dependencies:
     ascii-table "^0.0.9"
     browserify-cipher "^1.0.1"
     crypto-random-hex "^1.0.0"
     eth-lib "^0.2.8"
-    evm-lite-utils "^1.0.0-alpha.14"
+    evm-lite-utils "^1.0.0-alpha.15"
     json-bigint "0.3.0"
     randombytes "^2.1.0"
     uuid "^3.3.2"
@@ -1410,28 +1411,28 @@ evm-lite-core@1.0.0-alpha.14, evm-lite-core@^1.0.0-alpha.14:
     web3-eth-iban "1.0.0-beta.46"
     web3-utils "1.0.0-beta.46"
 
-evm-lite-datadir@1.0.0-alpha.14:
-  version "1.0.0-alpha.14"
-  resolved "https://registry.yarnpkg.com/evm-lite-datadir/-/evm-lite-datadir-1.0.0-alpha.14.tgz#ff6d54b9907515588e24ffee88a2ac9ba6604947"
-  integrity sha512-vIxmq8fK10m9CrZY5/JwMuOqwFjJXfnbvFgB2rr32+baHno9OgGPfgapDzPW5fJw5BV9k3tH1PtplgRA4HUqrQ==
+evm-lite-datadir@1.0.0-alpha.15:
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/evm-lite-datadir/-/evm-lite-datadir-1.0.0-alpha.15.tgz#d2ae63930ef57f39a7930263c48f626f45693c77"
+  integrity sha512-oTg0tzoQVEyM2BH/ENIyVuz25KO17OvAk7KP6ZWTDmj0K8ICT4+QWOclO/Ks6oqX3tha8Vv127e0iS51xKRB5w==
   dependencies:
-    evm-lite-core "^1.0.0-alpha.14"
-    evm-lite-keystore "^1.0.0-alpha.14"
-    evm-lite-utils "^1.0.0-alpha.14"
+    evm-lite-core "^1.0.0-alpha.15"
+    evm-lite-keystore "^1.0.0-alpha.15"
+    evm-lite-utils "^1.0.0-alpha.15"
     mkdirp "^0.5.1"
     toml "^3.0.0"
     tomlify-j0.4 "^3.0.0"
 
-evm-lite-keystore@1.0.0-alpha.14, evm-lite-keystore@^1.0.0-alpha.14:
-  version "1.0.0-alpha.14"
-  resolved "https://registry.yarnpkg.com/evm-lite-keystore/-/evm-lite-keystore-1.0.0-alpha.14.tgz#5f52cdbacd434305e1502b38d318b071e73f2726"
-  integrity sha512-WymRbBVoy7aBleLjE9oWlbWTu9nNzAnSyMu0dCsaEJw+aR1CyWyNnbQw/XLSbX6iqj8p/0MtRQpJHjT+9tTcJw==
+evm-lite-keystore@1.0.0-alpha.15, evm-lite-keystore@^1.0.0-alpha.15:
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/evm-lite-keystore/-/evm-lite-keystore-1.0.0-alpha.15.tgz#5a7c09666f5f70cb4064da47016ef699a821f8e8"
+  integrity sha512-keTaX+htSR8Wf6yzW/ZQjPqBVAsl3qjucNZeKkXwYN7h4pNHlGvRKFDzCekmMAiHxJh5sNIROQJCJKZvQfwGlA==
   dependencies:
     browserify-cipher "^1.0.1"
     crypto-random-hex "^1.0.0"
     eth-lib "^0.2.8"
-    evm-lite-core "^1.0.0-alpha.14"
-    evm-lite-utils "^1.0.0-alpha.14"
+    evm-lite-core "^1.0.0-alpha.15"
+    evm-lite-utils "^1.0.0-alpha.15"
     json-bigint "0.3.0"
     keccak256 "^1.0.0"
     mkdirp "^0.5.1"
@@ -1440,10 +1441,10 @@ evm-lite-keystore@1.0.0-alpha.14, evm-lite-keystore@^1.0.0-alpha.14:
     scryptsy "^2.0.0"
     uuid "^3.3.2"
 
-evm-lite-utils@1.0.0-alpha.14, evm-lite-utils@^1.0.0-alpha.14:
-  version "1.0.0-alpha.14"
-  resolved "https://registry.yarnpkg.com/evm-lite-utils/-/evm-lite-utils-1.0.0-alpha.14.tgz#5026b822d902d86f42523a362c37033edce4ef66"
-  integrity sha512-ooYbMQfcIpEVkPLriTWH7lbCHCgYRDM0XdUZuzXoBYeluC1vXemTr1aCOOz9b3KuTguu1JK1d4w//IosFhi8mQ==
+evm-lite-utils@1.0.0-alpha.15, evm-lite-utils@^1.0.0-alpha.15:
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/evm-lite-utils/-/evm-lite-utils-1.0.0-alpha.15.tgz#88f1159b1dbf8a8894a193e30d7aec295e209692"
+  integrity sha512-muOVwPhxzITk+sVHvVpGFmUH8v5MWjfWkyO5Xzg+pjpscHJ2pX12lTWU4PqLKFY/qJI5OBxhhmIUjjKuXrgoLA==
   dependencies:
     mkdirp "^0.5.1"
 

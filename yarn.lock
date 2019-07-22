@@ -1377,16 +1377,16 @@ ethjs-unit@^0.1.6:
     bn.js "4.11.6"
     number-to-bn "1.7.0"
 
-evm-lite-cli@^1.0.0-alpha.17:
-  version "1.0.0-alpha.17"
-  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.0.0-alpha.17.tgz#f1e3186aec6fbba324d854b9d0ca9904263df81c"
-  integrity sha512-dwSfL8GzyF7o2/v3NcInTSvqi4qcFXp94qnLoeAliGM1rBH8wBsxHVQIqldA7CeMMtbjuPmd3entMmKCvbp+WA==
+evm-lite-cli@^1.0.0-alpha.18:
+  version "1.0.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.0.0-alpha.18.tgz#804eb66479fbbcb1e9924f8625acb30497d756a1"
+  integrity sha512-3lXn1Y/Nb+N8y48lVNgcOI2Gy/8zL8AvG5ZpWTFQzyoch325Vhp15rSWbCAOaPxeqxhF0+1Bwd59dM6HMsTPWA==
   dependencies:
     ascii-table "^0.0.9"
     chalk "^2.4.2"
     dotenv "^8.0.0"
     evm-lite-core "1.0.0-alpha.15"
-    evm-lite-datadir "1.0.0-alpha.15"
+    evm-lite-datadir "1.0.0-alpha.16"
     evm-lite-keystore "1.0.0-alpha.15"
     evm-lite-utils "1.0.0-alpha.15"
     figlet "^1.2.3"
@@ -1411,10 +1411,10 @@ evm-lite-core@1.0.0-alpha.15, evm-lite-core@^1.0.0-alpha.15:
     web3-eth-iban "1.0.0-beta.46"
     web3-utils "1.0.0-beta.46"
 
-evm-lite-datadir@1.0.0-alpha.15:
-  version "1.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/evm-lite-datadir/-/evm-lite-datadir-1.0.0-alpha.15.tgz#d2ae63930ef57f39a7930263c48f626f45693c77"
-  integrity sha512-oTg0tzoQVEyM2BH/ENIyVuz25KO17OvAk7KP6ZWTDmj0K8ICT4+QWOclO/Ks6oqX3tha8Vv127e0iS51xKRB5w==
+evm-lite-datadir@1.0.0-alpha.16:
+  version "1.0.0-alpha.16"
+  resolved "https://registry.yarnpkg.com/evm-lite-datadir/-/evm-lite-datadir-1.0.0-alpha.16.tgz#4e5bc1c0b4c0f66916ce3f87f0c2733ceed83f4d"
+  integrity sha512-j6mfncEseE1UKmcxg5e4VVklHJwQPiIgNvFvFdyF5mslg87pgINAo5gvB0Y0CGT4JbFsiBBcLrdADmHzXAXiGA==
   dependencies:
     evm-lite-core "^1.0.0-alpha.15"
     evm-lite-keystore "^1.0.0-alpha.15"

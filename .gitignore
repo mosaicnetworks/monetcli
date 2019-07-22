@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+dist
+lerna-debug.log
+tsconfig.tsbuildinfo
+coverage
+.env
+pwd.txt
+tests/assets/keystore/
+tests/assets/monet.toml
+tests/assets/wallet.toml
+yarn-error.log
+./scripts

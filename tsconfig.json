@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"outDir": "./dist",
+		"declaration": true,
+		"declarationDir": "./dist/typings",
+		"strict": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"skipDefaultLibCheck": true,
+		"typeRoots": ["./node_modules/@types", "./types"]
+	},
+	"include": ["./src/**/*.ts"]
+}

@@ -7,7 +7,7 @@ coverage
 .env
 pwd.txt
 tests/assets/keystore/
-tests/assets/monet.toml
+tests/assets/monetcli.toml
 tests/assets/wallet.toml
 yarn-error.log
 ./scripts

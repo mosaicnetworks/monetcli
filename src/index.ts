@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { osDataDir } from 'evm-lite-datadir';
-import { init } from 'evm-lite-cli';
+import { init, IInit } from 'evm-lite-cli';
 
 import {
 	// accounts
@@ -34,9 +34,13 @@ import {
 // custom commands
 import version from './cmd/version';
 
-const name = 'Monet CLI';
-const delimiter = 'monet';
-const datadir = osDataDir('Monet');
+const params: IInit = {
+	name: 'Monet CLI',
+	delimiter: 'monet',
+	datadir: osDataDir('Monet'),
+	config: 'monetcli'
+};
+
 const commands = [
 	// accounts
 	accountsCreate,
@@ -67,4 +71,4 @@ const commands = [
 	version
 ];
 
-init(name, delimiter, datadir, commands).catch(console.log);
+init(params, commands).catch(console.log);

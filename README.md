@@ -1,6 +1,6 @@
 # Monet CLI
 
-## **_Requires development version of `evm-lite-cli`!_**
+> **_Requires development version of `evm-lite-cli`!_**
 
 [![npm version](https://badge.fury.io/js/monetcli.svg)](https://badge.fury.io/js/monetcli)
 

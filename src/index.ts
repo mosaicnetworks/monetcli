@@ -25,8 +25,6 @@ import {
 	poaWhitelist,
 
 	// misc
-	clear,
-	interactive,
 	transfer,
 	info
 } from 'evm-lite-cli';
@@ -63,8 +61,6 @@ const commands = [
 	poaWhitelist,
 
 	// misc
-	clear,
-	interactive,
 	transfer,
 	info,
 

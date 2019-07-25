@@ -2,10 +2,10 @@ import Vorpal, { Command, Args } from 'vorpal';
 
 import {
 	Session,
-	Staging,
 	IStagingFunction,
 	IOptions,
-	execute
+	execute,
+	Frames
 } from 'evm-lite-cli';
 
 const pkg = require('../../package.json');
@@ -36,14 +36,14 @@ export const stage: IStagingFunction<Arguments, string, string> = async (
 	args: Arguments,
 	session: Session
 ) => {
-	const staging = new Staging<Arguments, string, string>(session.debug, args);
+	const frames = new Frames<Arguments, string, string>(session, args);
 
-	staging.debug(`evm-lite-core: ${pkg.dependencies[`evm-lite-core`]}`);
-	staging.debug(
-		`evm-lite-keystore: ${pkg.dependencies[`evm-lite-keystore`]}`
-	);
-	staging.debug(`evm-lite-datadir: ${pkg.dependencies[`evm-lite-datadir`]}`);
-	staging.debug(`evm-lite-cli: ${pkg.dependencies[`evm-lite-cli`]}`);
+	const { debug, success } = frames.staging();
 
-	return Promise.resolve(staging.success(`monetcli ${pkg.version}`));
+	debug(`evm-lite-core: ${pkg.dependencies[`evm-lite-core`]}`);
+	debug(`evm-lite-keystore: ${pkg.dependencies[`evm-lite-keystore`]}`);
+	debug(`evm-lite-datadir: ${pkg.dependencies[`evm-lite-datadir`]}`);
+	debug(`evm-lite-cli: ${pkg.dependencies[`evm-lite-cli`]}`);
+
+	return Promise.resolve(success(`monetcli ${pkg.version}`));
 };

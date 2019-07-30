@@ -48,6 +48,6 @@ $ monetcli config set -i
 
 ## Proof of Authority
 
-The Monet Hub uses Proof of Authority with EVM-Lite and Babble.
+The Monet Hub uses Proof of Authority with [EVM-Lite](https://github.com/mosaicnetworks/evm-lite) and [Babble](https://github.com/mosaicnetworks/babble).
 
 A [Proof of Authority Document](docs/poa.md) demonstrating adding a node is avaiable.

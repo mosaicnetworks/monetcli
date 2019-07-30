@@ -15,7 +15,6 @@ $ monetcli i
  | |  | | | (_) | | | | | |  __/ | |_    | |___  | |___   | |
  |_|  |_|  \___/  |_| |_|  \___|  \__|    \____| |_____| |___|
 
- Debug:       True
  Mode:        Interactive
  Data Dir:    ~/.monet
  Config File: ~/.monet/monetcli.toml

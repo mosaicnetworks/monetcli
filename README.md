@@ -50,4 +50,4 @@ $ monetcli config set -i
 
 The Monet Hub uses Proof of Authority with EVM-Lite and Babble.
 
-A [Proof of Authority Document](docs/proof-of-authority.md) demonstrating adding a node is available in the `evm-lite-cli` repository.
+A [Proof of Authority Document](docs/poa.md) demonstrating adding a node is avaiable.

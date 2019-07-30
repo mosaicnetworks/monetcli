@@ -4,6 +4,18 @@
 
 A CLI wallet to interact with the Monet Hub.
 
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Data Directory](#data-directory)
+3. [Proof of Authority](#proof-of-authority)
+
+## Overview
+
+This is a wrapper around [`evm-lite-cli`](https://github.com/mosaicnetworks/evm-lite-cli).
+
+Any Monet Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`monetd`](https://github.com/mosaicnetworks/monetd) instance as some functionality may not be accessible through `evm-lite-cli`
+
 ## Data Directory
 
 The first time `monetcli` runs it creates a special directory in a default location, where it stores any relevant information.
@@ -12,28 +24,29 @@ The first time `monetcli` runs it creates a special directory in a default locat
 -   Mac OS: `~/Library/MONET`
 -   Windows: `~/AppData/Roaming/MONET`
 
-In particular, this directory contains the following items:
+In particular, `monetcli` creates the following:
 
--   **monetcli.toml**: where global options are specified. These values may be
-    updated by `monetcli config` command.
--   **keystore**: where all encrypted account keys are stored (ordered by `UTC timestamps`).
+-   **monetcli.toml**: where global options are specified (these values can be
+    updated by `monetcli config` command)
 
-### `monetcli.toml`
+    ```toml
+    [connection]
+    host = "127.0.0.1"
+    port = 8000
 
-Example monetcli.toml:
+    [defaults]
+    from = "0x702B0ad02a7a6056EB16A697A96d849c228F5fB4"
+    gas = 1000000000000
+    gasPrice = 0
+    ```
 
-```toml
-[connection]
-host = "127.0.0.1"
-port = 8000
+-   **keystore**: where all encrypted account keys are stored (ordered by `UTC timestamps`)
 
-[defaults]
-from = "0x702B0ad02a7a6056EB16A697A96d849c228F5fB4"
-gas = 1000000000000
-gasPrice = 0
-```
+### Cofiguration
 
-To change default configuration values run `monetcli config set -i` or `monetcli c s -i`. You will be
+To change default configuration values in `monetcli.toml` run `monetcli config set -i` or `monetcli c s -i`.
+
+You will be
 taken to an interactive prompt to change connection and default values.
 
 ```console

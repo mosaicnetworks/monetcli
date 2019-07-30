@@ -26,24 +26,23 @@ The first time `monetcli` runs it creates a special directory in a default locat
 
 In particular, `monetcli` creates the following:
 
--   **monetcli.toml**: where global options are specified. These values may be
-    updated by `monetcli config` command.
--   **keystore**: where all encrypted account keys are stored (ordered by `UTC timestamps`).
+-   **monetcli.toml**: where global options are specified (these values may be
+    updated by `monetcli config` command)
+
+    ```toml
+    [connection]
+    host = "127.0.0.1"
+    port = 8000
+
+    [defaults]
+    from = "0x702B0ad02a7a6056EB16A697A96d849c228F5fB4"
+    gas = 1000000000000
+    gasPrice = 0
+    ```
+
+-   **keystore**: where all encrypted account keys are stored (ordered by `UTC timestamps`)
 
 ### `monetcli.toml`
-
-Example monetcli.toml:
-
-```toml
-[connection]
-host = "127.0.0.1"
-port = 8000
-
-[defaults]
-from = "0x702B0ad02a7a6056EB16A697A96d849c228F5fB4"
-gas = 1000000000000
-gasPrice = 0
-```
 
 To change default configuration values run `monetcli config set -i` or `monetcli c s -i`. You will be
 taken to an interactive prompt to change connection and default values.

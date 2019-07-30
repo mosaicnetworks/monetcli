@@ -11,7 +11,7 @@ A CLI wallet to interact with the Monet Hub.
 The global flag `-d, --datadir` specifies the directory where `keystore` and `monetcli.toml` are stored unless overwritten by specific flags.
 
 ```bash
-evmlc --datadir [path] interactive
+monetcli --datadir [path] interactive
 ```
 
 ## Data Directory
@@ -20,13 +20,13 @@ The first time `monetcli` runs, and if no options are specified, it creates a
 special directory in a default location, where it
 stores any relevant information.
 
--   Windows: `~/AppData/Roaming/EVMLC`
--   Mac OS: `~/Library/EVMLC`
--   Linux: `~/.evmlc`
+-   Linux: `~/.monet`
+-   Mac OS: `~/Library/MONET`
+-   Windows: `~/AppData/Roaming/MONET`
 
 In particular, this directory contains the following items:
 
--   **evmlc.toml**: where global options are specified. These values may be
+-   **monetcli.toml**: where global options are specified. These values may be
     overwritten by CLI flags.
 -   **keystore**: where all encrypted account keys are stored.
 
@@ -57,3 +57,9 @@ $ monetcli config set -i
 ? Gas: 1000000000000
 ? Gas Price: 0
 ```
+
+## Proof of Authority
+
+The Monet Hub uses Proof of Authority with EVM-Lite and Babble.
+
+A [Proof of Authority Document](docs/proof-of-authority.md) demonstrating adding a node is available in the `evm-lite-cli` repository.

@@ -18,10 +18,10 @@ export interface Arguments extends Args<Options> {
 	options: Options;
 }
 
-export default function command(evmlc: Vorpal, session: Session): Command {
+export default function command(monetcli: Vorpal, session: Session): Command {
 	const description = 'Display current version of cli';
 
-	return evmlc
+	return monetcli
 		.command('version')
 		.alias('v')
 		.option('-d, --debug', 'show debug output')

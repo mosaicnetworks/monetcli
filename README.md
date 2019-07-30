@@ -14,7 +14,7 @@ A CLI wallet to interact with the Monet Hub.
 
 This is a wrapper around [`evm-lite-cli`](https://github.com/mosaicnetworks/evm-lite-cli).
 
-Any Monet Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`monetd`](https://github.com/mosaicnetworks/monetd) instance as some functionailty may not be accessible through `evm-lite-cli`
+Any Monet Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`monetd`](https://github.com/mosaicnetworks/monetd) instance as some functionality may not be accessible through `evm-lite-cli`
 
 ## Data Directory
 
@@ -26,7 +26,7 @@ The first time `monetcli` runs it creates a special directory in a default locat
 
 In particular, `monetcli` creates the following:
 
--   **monetcli.toml**: where global options are specified (these values may be
+-   **monetcli.toml**: where global options are specified (these values can be
     updated by `monetcli config` command)
 
     ```toml

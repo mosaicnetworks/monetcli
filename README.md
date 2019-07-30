@@ -42,9 +42,11 @@ In particular, `monetcli` creates the following:
 
 -   **keystore**: where all encrypted account keys are stored (ordered by `UTC timestamps`)
 
-### `monetcli.toml`
+### Cofiguration
 
-To change default configuration values run `monetcli config set -i` or `monetcli c s -i`. You will be
+To change default configuration values in `monetcli.toml` run `monetcli config set -i` or `monetcli c s -i`.
+
+You will be
 taken to an interactive prompt to change connection and default values.
 
 ```console

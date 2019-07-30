@@ -4,21 +4,9 @@
 
 A CLI wallet to interact with the Monet Hub.
 
-## Commands
-
-### Flags
-
-The global flag `-d, --datadir` specifies the directory where `keystore` and `monetcli.toml` are stored unless overwritten by specific flags.
-
-```bash
-monetcli --datadir [path] interactive
-```
-
 ## Data Directory
 
-The first time `monetcli` runs, and if no options are specified, it creates a
-special directory in a default location, where it
-stores any relevant information.
+The first time `monetcli` runs it creates a special directory in a default location, where it stores any relevant information.
 
 -   Linux: `~/.monet`
 -   Mac OS: `~/Library/MONET`
@@ -27,8 +15,8 @@ stores any relevant information.
 In particular, this directory contains the following items:
 
 -   **monetcli.toml**: where global options are specified. These values may be
-    overwritten by CLI flags.
--   **keystore**: where all encrypted account keys are stored.
+    updated by `monetcli config` command.
+-   **keystore**: where all encrypted account keys are stored (ordered by `UTC timestamps`).
 
 ### `monetcli.toml`
 

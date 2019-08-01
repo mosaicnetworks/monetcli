@@ -19,6 +19,8 @@ This is a wrapper around [`evm-lite-cli`](https://github.com/mosaicnetworks/evm-
 
 Any Monet Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`monetd`](https://github.com/mosaicnetworks/monetd) instance as some functionality may not be accessible through `evm-lite-cli`
 
+You can read more `monetd` and how to get started in the documentation [here](https://monetd.readthedocs.io/en/latest/index.html).
+
 ## Installation
 
 You can easily install `monetcli` with NPM
@@ -35,7 +37,9 @@ yarn global add monetcli
 
 ## Data Directory
 
-The first time `monetcli` runs it creates a special directory in a default location, where it stores any relevant information.
+Monet CLI creates a special directory in a default location (specific to `OS`), where it stores any relevant information.
+
+The locations are:
 
 -   Linux: `~/.monet`
 -   Mac OS: `~/Library/MONET`
@@ -57,11 +61,13 @@ In particular, `monetcli` creates the following:
     gasPrice = 0
     ```
 
--   **keystore**: where all encrypted account keys are stored (ordered by `UTC timestamps`)
+-   **keystore**: where all encrypted account keys are stored
 
-### Cofiguration
+_This directory is shared by `monetd`._
 
-To change default configuration values in `monetcli.toml` run `monetcli config set -i` or `monetcli c s -i`.
+### Configuration
+
+To change default configuration values `run` monetcli config set -i or `monetcli c s -i`.
 
 You will be
 taken to an interactive prompt to change connection and default values.
@@ -80,4 +86,4 @@ $ monetcli config set -i
 
 The Monet Hub uses Proof of Authority with [EVM-Lite](https://github.com/mosaicnetworks/evm-lite) and [Babble](https://github.com/mosaicnetworks/babble).
 
-A [Proof of Authority Document](docs/poa.md) demonstrating adding a node is avaiable.
+A [Proof of Authority Document](docs/poa.md) demonstrating the addition of a node is available.

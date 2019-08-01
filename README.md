@@ -1,3 +1,5 @@
+<img width="75px" height="75px" align="right" alt="Monet Logo" src="https://github.com/mosaicnetworks/monetd/raw/master/docs/assets/monet_logo.png" title="Monet CLI"/>
+
 # Monet CLI
 
 [![npm version](https://badge.fury.io/js/monetcli.svg)](https://badge.fury.io/js/monetcli)

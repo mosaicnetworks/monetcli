@@ -50,7 +50,7 @@ In particular, `monetcli` creates the following:
     port = 8000
 
     [defaults]
-    from = "0x702B0ad02a7a6056EB16A697A96d849c228F5fB4"
+    from = "moniker"
     gas = 1000000000000
     gasPrice = 0
     ```
@@ -69,7 +69,7 @@ $ monetcli config set -i
 
 ? Host: 127.0.0.1
 ? Port: 8000
-? From: 0x702B0ad02a7a6056EB16A697A96d849c228F5fB4
+? From: moniker
 ? Gas: 1000000000000
 ? Gas Price: 0
 ```

@@ -19,7 +19,7 @@ This is a wrapper around [`evm-lite-cli`](https://github.com/mosaicnetworks/evm-
 
 Any Monet Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`monetd`](https://github.com/mosaicnetworks/monetd) instance as some functionality may not be accessible through `evm-lite-cli`
 
-You can read more `monetd` and how to get started in the documentation [here](https://monetd.readthedocs.io/en/latest/index.html).
+You can read more about `monetd` and how to get started in the documentation [here](https://monetd.readthedocs.io/en/latest/index.html).
 
 ## Installation
 
@@ -62,15 +62,28 @@ In particular, `monetcli` creates the following:
     ```
 
 -   **keystore**: where all encrypted account keys are stored
+    ```console
+    .
+    ├── monetcli.toml
+    ├── keystore
+    │   ├── node0.json
+    │   ├── node1.json
+    │   ├── node2.json
+    │   └── node3.json
+    └── ...
+    ```
 
 _This directory is shared by `monetd`._
 
 ### Configuration
 
-To change default configuration values `run` monetcli config set -i or `monetcli c s -i`.
+To change default configuration values run
 
-You will be
-taken to an interactive prompt to change connection and default values.
+```
+monetcli config set -i
+```
+
+You will be taken to an interactive prompt to change connection and default values.
 
 ```console
 $ monetcli config set -i

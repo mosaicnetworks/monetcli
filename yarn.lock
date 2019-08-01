@@ -1259,17 +1259,6 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
-edit-json-file@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/edit-json-file/-/edit-json-file-1.2.1.tgz#151f337ebe70d39964e3388c1320aa4acddd9bef"
-  integrity sha512-/azxdkmsXKfR5AbrNmj2E5rUg+RZk1NHeBk/GaGBeEEwldNS8UzD8Enq9+qkMXnslmZr2iZEFpvrKHeSmxMCAw==
-  dependencies:
-    find-value "^1.0.3"
-    iterate-object "^1.3.2"
-    r-json "^1.2.5"
-    set-value "^0.4.0"
-    w-json "^1.3.5"
-
 elliptic@^6.4.0:
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.0.tgz#2b8ed4c891b7de3200e14412a5b8248c7af505ca"
@@ -1377,33 +1366,33 @@ ethjs-unit@^0.1.6:
     bn.js "4.11.6"
     number-to-bn "1.7.0"
 
-evm-lite-cli@1.0.0-alpha.21:
-  version "1.0.0-alpha.21"
-  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.0.0-alpha.21.tgz#aede5e64c90f2ca6a67435de8df1e44dfb534473"
-  integrity sha512-5LE6oUacCiI/BHMFrjFIqkM+uQiCsW/MIKfVFcn4vN9fXzv5BWCZ79/TWoonnvlJlD4ODQWh/i7Cm0+ZvxjzWA==
+evm-lite-cli@1.0.0-alpha.22:
+  version "1.0.0-alpha.22"
+  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.0.0-alpha.22.tgz#c23402c21004d1e2c0580ca8f19595ea8ea5f3d4"
+  integrity sha512-eE2dpIh8QCgXoxP/m+Uhb0Mp19Td5mHiFK5dJZo9JtN7o7N9JP939f2wbndDo4xiR7RsaFLXtzjEZVXreLUwgw==
   dependencies:
     ascii-table "^0.0.9"
     chalk "^2.4.2"
     dotenv "^8.0.0"
-    evm-lite-core "1.0.0-alpha.17"
-    evm-lite-datadir "1.0.0-alpha.17"
-    evm-lite-keystore "1.0.0-alpha.17"
-    evm-lite-utils "1.0.0-alpha.15"
+    evm-lite-core "1.0.0-alpha.18"
+    evm-lite-datadir "1.0.0-alpha.18"
+    evm-lite-keystore "1.0.0-alpha.18"
+    evm-lite-utils "1.0.0-alpha.18"
     figlet "^1.2.3"
     inquirer "^6.4.1"
     mkdirp "^0.5.1"
     vorpal "^1.12.0"
 
-evm-lite-core@1.0.0-alpha.17, evm-lite-core@^1.0.0-alpha.17:
-  version "1.0.0-alpha.17"
-  resolved "https://registry.yarnpkg.com/evm-lite-core/-/evm-lite-core-1.0.0-alpha.17.tgz#b40596aa89f77bf0a67fc17deacb135859ff7798"
-  integrity sha512-Ehq5vtSmf10qra6G0PmM0nXrvOohw5l/ewbb6c6p0af501CsFi4u0bWbJe5C6fsYYCLqSYf2gptu5kBhPKCj/A==
+evm-lite-core@1.0.0-alpha.18, evm-lite-core@^1.0.0-alpha.18:
+  version "1.0.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/evm-lite-core/-/evm-lite-core-1.0.0-alpha.18.tgz#aa6af6324635d608da88adec23c94e96804c4497"
+  integrity sha512-slxB77eH0NLjpInUdtiAKWtO2wji83axE8sspvDalXRXMRclpg3PbUZI5AymxYxtVt1B7pmkkHGBLj89LUKwng==
   dependencies:
     ascii-table "^0.0.9"
     browserify-cipher "^1.0.1"
     crypto-random-hex "^1.0.0"
-    eth-lib "^0.2.8"
-    evm-lite-utils "^1.0.0-alpha.15"
+    eth-lib "0.2.8"
+    evm-lite-utils "^1.0.0-alpha.18"
     json-bigint "0.3.0"
     randombytes "^2.1.0"
     uuid "^3.3.2"
@@ -1411,40 +1400,40 @@ evm-lite-core@1.0.0-alpha.17, evm-lite-core@^1.0.0-alpha.17:
     web3-eth-iban "1.0.0-beta.46"
     web3-utils "1.0.0-beta.46"
 
-evm-lite-datadir@1.0.0-alpha.17:
-  version "1.0.0-alpha.17"
-  resolved "https://registry.yarnpkg.com/evm-lite-datadir/-/evm-lite-datadir-1.0.0-alpha.17.tgz#2b8c40b6e23bd0327608a7cbf31b62982b64fd9f"
-  integrity sha512-QsS9kNyEDYAfIxkS4lOPFDBFJOMeCwvgK53whqS2jOOrfAU5Zyd63amWdobdYYxfVD92Raf+TPRb0felq6BprQ==
+evm-lite-datadir@1.0.0-alpha.18:
+  version "1.0.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/evm-lite-datadir/-/evm-lite-datadir-1.0.0-alpha.18.tgz#dd79557a86549633eceb11cbc43b1121c445e443"
+  integrity sha512-HLC4QOF/+11WqHBauOb37j5oT91vbpJWPRqJI7LziR8pXcs8qhJJ6CKmukgz9qr0cbj1JD2tMZ8BurrIppaEZw==
   dependencies:
-    evm-lite-core "^1.0.0-alpha.17"
-    evm-lite-keystore "^1.0.0-alpha.17"
-    evm-lite-utils "^1.0.0-alpha.15"
+    evm-lite-core "^1.0.0-alpha.18"
+    evm-lite-keystore "^1.0.0-alpha.18"
+    evm-lite-utils "^1.0.0-alpha.18"
     mkdirp "^0.5.1"
     toml "^3.0.0"
     tomlify-j0.4 "^3.0.0"
 
-evm-lite-keystore@1.0.0-alpha.17, evm-lite-keystore@^1.0.0-alpha.17:
-  version "1.0.0-alpha.17"
-  resolved "https://registry.yarnpkg.com/evm-lite-keystore/-/evm-lite-keystore-1.0.0-alpha.17.tgz#6c7a993cdfefee13104854281aa174c27a49d041"
-  integrity sha512-5jW23m9dFtFmXFru1NOrR8B2dxnWnQyUkVt8nYwVZ3iFagMNVFeVdUfy8juM2MdbDnpLpntVzCOJsL3+C4HHKg==
+evm-lite-keystore@1.0.0-alpha.18, evm-lite-keystore@^1.0.0-alpha.18:
+  version "1.0.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/evm-lite-keystore/-/evm-lite-keystore-1.0.0-alpha.18.tgz#43a3ac85ab44936dace7e71baffba6ee8ec7ba0d"
+  integrity sha512-ejRAeTEeP0JJMy4ky9yQmVRmjAzIrIgZ65Qry7wSk67SW7pxFRr/L5zifldYZ09JcNcF4epup2NU3PQki6x68w==
   dependencies:
     browserify-cipher "^1.0.1"
     crypto-random-hex "^1.0.0"
     eth-lib "^0.2.8"
-    evm-lite-core "^1.0.0-alpha.17"
-    evm-lite-utils "^1.0.0-alpha.15"
+    evm-lite-core "^1.0.0-alpha.18"
+    evm-lite-utils "^1.0.0-alpha.18"
     json-bigint "0.3.0"
     keccak256 "^1.0.0"
     mkdirp "^0.5.1"
     randombytes "^2.1.0"
-    scrypt "^6.0.3"
+    scrypt "6.0.3"
     scryptsy "^2.0.0"
     uuid "^3.3.2"
 
-evm-lite-utils@1.0.0-alpha.15, evm-lite-utils@^1.0.0-alpha.15:
-  version "1.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/evm-lite-utils/-/evm-lite-utils-1.0.0-alpha.15.tgz#88f1159b1dbf8a8894a193e30d7aec295e209692"
-  integrity sha512-muOVwPhxzITk+sVHvVpGFmUH8v5MWjfWkyO5Xzg+pjpscHJ2pX12lTWU4PqLKFY/qJI5OBxhhmIUjjKuXrgoLA==
+evm-lite-utils@1.0.0-alpha.18, evm-lite-utils@^1.0.0-alpha.18:
+  version "1.0.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/evm-lite-utils/-/evm-lite-utils-1.0.0-alpha.18.tgz#c2a186e56d5edcbf3695c8373d3654c919f2c952"
+  integrity sha512-hb3a/Vc5p6NVTXNi4/4M6JfiQFv8c63lmXacrvlnxC3llqBDjRrwWxyxWUlWBPcuxeNsImnOKU/llTFpCmx/vA==
   dependencies:
     mkdirp "^0.5.1"
 
@@ -1625,11 +1614,6 @@ find-up@^3.0.0:
   integrity sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==
   dependencies:
     locate-path "^3.0.0"
-
-find-value@^1.0.3:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/find-value/-/find-value-1.0.11.tgz#493c062884d4aa26a66571adedea98a46ad3a060"
-  integrity sha512-ECGsf/85PJgK/kOv6q1/MA1pawuBvQi12td/7MQHakfE7/P2jFgUeo0BL1dbAF97DPOTrtsrFBHkwBnPMWZiKg==
 
 for-each@^0.3.3:
   version "0.3.3"
@@ -2120,7 +2104,7 @@ is-number@^3.0.0:
   dependencies:
     kind-of "^3.0.2"
 
-is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-object@^2.0.4:
+is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-2.0.4.tgz#2c163b3fafb1b606d9d17928f05c2a1c38e07677"
   integrity sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==
@@ -2242,11 +2226,6 @@ istanbul-reports@^2.1.1:
   integrity sha512-SKi4rnMyLBKe0Jy2uUdx28h8oG7ph2PPuQPvIAh31d+Ci+lSiEu4C+h3oBPuJ9+mPKhOyW0M8gY4U5NM1WLeXA==
   dependencies:
     handlebars "^4.1.2"
-
-iterate-object@^1.3.2:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/iterate-object/-/iterate-object-1.3.3.tgz#c58e60f7f0caefa2d382027a484b215988a7a296"
-  integrity sha512-DximWbkke36cnrSfNJv6bgcB2QOMV9PRD2FiowwzCoMsh8RupFLdbNIzWe+cVDWT+NIMNJgGlB1dGxP6kpzGtA==
 
 jest-changed-files@^24.8.0:
   version "24.8.0"
@@ -3499,11 +3478,6 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-r-json@^1.2.5:
-  version "1.2.9"
-  resolved "https://registry.yarnpkg.com/r-json/-/r-json-1.2.9.tgz#0637da3485b0b4492e9ffae85796f8b2f373f600"
-  integrity sha512-E5u25XBE7PpZmH5XwtthAmNvSLMTygDQMpcPtCTUBdvwPaqgIYJrxlRQJhG55Sgz7uC0Tuyh5nqNrsDT3uiefA==
-
 randombytes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -3815,7 +3789,7 @@ sax@^1.2.4:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-scrypt@^6.0.3:
+scrypt@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/scrypt/-/scrypt-6.0.3.tgz#04e014a5682b53fa50c2d5cce167d719c06d870d"
   integrity sha1-BOAUpWgrU/pQwtXM4WfXGcBthw0=
@@ -3841,16 +3815,6 @@ set-blocking@^2.0.0, set-blocking@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
   integrity sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
-
-set-value@^0.4.0:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/set-value/-/set-value-0.4.3.tgz#7db08f9d3d22dc7f78e53af3c3bf4666ecdfccf1"
-  integrity sha1-fbCPnT0i3H945Trzw79GZuzfzPE=
-  dependencies:
-    extend-shallow "^2.0.1"
-    is-extendable "^0.1.1"
-    is-plain-object "^2.0.1"
-    to-object-path "^0.3.0"
 
 set-value@^2.0.0, set-value@^2.0.1:
   version "2.0.1"
@@ -4529,11 +4493,6 @@ vorpal@^1.12.0:
     node-localstorage "^0.6.0"
     strip-ansi "^3.0.0"
     wrap-ansi "^2.0.0"
-
-w-json@^1.3.5:
-  version "1.3.9"
-  resolved "https://registry.yarnpkg.com/w-json/-/w-json-1.3.9.tgz#c1ddfbae1279f7e84d5a1bd587b53a03f5c5cff8"
-  integrity sha512-9hvWhnNZ5J3ypOJt2LzmAQBl1NrQBZED/E8MwkZQ+lGTq51hyR9zeH0dgaJzLfzOVoTbxe/yPqL10c5WVsHvbg==
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"

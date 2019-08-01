@@ -7,14 +7,29 @@ A CLI wallet to interact with the Monet Hub.
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Data Directory](#data-directory)
-3. [Proof of Authority](#proof-of-authority)
+2. [Installation](#installation)
+3. [Data Directory](#data-directory)
+4. [Proof of Authority](#proof-of-authority)
 
 ## Overview
 
 This is a wrapper around [`evm-lite-cli`](https://github.com/mosaicnetworks/evm-lite-cli).
 
 Any Monet Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`monetd`](https://github.com/mosaicnetworks/monetd) instance as some functionality may not be accessible through `evm-lite-cli`
+
+## Installation
+
+You can easily install `monetcli` with NPM
+
+```bash
+npm install -g monetcli
+```
+
+or with `yarn`
+
+```bash
+yarn global add monetcli
+```
 
 ## Data Directory
 

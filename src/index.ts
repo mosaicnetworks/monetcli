@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { osDataDir } from 'evm-lite-datadir';
+import { osdatadir } from 'evm-lite-datadir';
 import { init, IInit } from 'evm-lite-cli';
 
 import {
@@ -35,7 +35,7 @@ import version from './cmd/version';
 const params: IInit = {
 	name: 'Monet CLI',
 	delimiter: 'monet',
-	datadir: osDataDir('Monet'),
+	datadir: osdatadir('Monet'),
 	config: 'monetcli'
 };
 

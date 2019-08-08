@@ -1,4 +1,4 @@
-<img width="75px" height="75px" align="right" alt="Monet Logo" src="https://github.com/mosaicnetworks/monetd/raw/master/docs/assets/monet_logo.png" title="Monet CLI"/>
+<img width="75px" height="75px" align="right" alt="Monet Logo" src="https://github.com/mosaicnetworks/monetd/raw/master/docs/_static/monet_logo.png" title="Monet CLI"/>
 
 # Monet CLI
 

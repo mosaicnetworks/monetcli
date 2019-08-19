@@ -1,11 +1,11 @@
-import Vorpal, { Command, Args } from 'vorpal';
+import Vorpal, { Args, Command } from 'vorpal';
 
 import {
-	Session,
-	IStagingFunction,
-	IOptions,
 	execute,
-	Frames
+	Frames,
+	IOptions,
+	IStagingFunction,
+	Session
 } from 'evm-lite-cli';
 
 const pkg = require('../../package.json');

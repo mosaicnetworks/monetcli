@@ -1,14 +1,19 @@
-import Vorpal, { Command, Args } from 'vorpal';
+import Vorpal, { Args, Command } from 'vorpal';
 
 import {
-	Session,
-	IStagingFunction,
-	IOptions,
 	execute,
-	Frames
+	Frames,
+	IOptions,
+	IStagingFunction,
+	Session
 } from 'evm-lite-cli';
 
-interface Options extends IOptions {}
+import { BABBLE_BLOCK } from '../errors/babble';
+
+interface Options extends IOptions {
+	host?: string;
+	port?: number;
+}
 
 export interface Arguments extends Args<Options> {
 	block?: number;
@@ -22,6 +27,8 @@ export default function command(monetcli: Vorpal, session: Session): Command {
 		.command('block [block]')
 		.alias('b')
 		.option('-d, --debug', 'show debug output')
+		.option('-h, --host <ip>', 'override config host value')
+		.option('-p, --port <port>', 'override config port value')
 		.description(description)
 		.types({
 			string: []
@@ -35,17 +42,42 @@ export const stage: IStagingFunction<Arguments, string, string> = async (
 ) => {
 	const frames = new Frames<Arguments, string, string>(session, args);
 
+	// args
+	const { options } = args;
+
+	// frames
 	const { debug, success, error } = frames.staging();
+	const { connect } = frames.generics();
+
+	// config
+	const config = session.datadir.config;
+
+	// command execution
+	const host = options.host || config.connection.host;
+	const port = options.port || config.connection.port;
+
+	await connect(
+		host,
+		port
+	);
 
 	if (!args.block) {
-		return error('', 'A block number must be specified');
+		return error(
+			BABBLE_BLOCK.BLOCK_INDEX_EMPTY,
+			'A block number must be specified'
+		);
 	}
+
+	let block;
+
+	console.log(session.node.consensus);
 
 	try {
-		const block = await session.node.babble.getBlock(args.block);
+		block = await session.node.consensus.getBlock(args.block);
 	} catch (e) {
-		// pass
+		debug(e);
+		return error(BABBLE_BLOCK.BLOCK_INDEX_EMPTY, e.toString());
 	}
 
-	return Promise.resolve(success(`${args.block}`));
+	return Promise.resolve(success(`${JSON.stringify(block)}`));
 };

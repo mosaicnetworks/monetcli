@@ -1,42 +1,46 @@
 #!/usr/bin/env node
 
+import { ICLIConfig, init } from 'evm-lite-cli';
 import { osdatadir } from 'evm-lite-datadir';
-import { init, IInit } from 'evm-lite-cli';
 
 import {
 	// accounts
 	accountsCreate,
 	accountsGet,
+	accountsImport,
 	accountsList,
 	accountsUpdate,
-	accountsImport,
 
 	// config
 	configSet,
 	configView,
 
 	// pos
+	info,
 	poaCheck,
 	poaInfo,
 	poaInit,
 	poaNominate,
 	poaNomineelist,
 	poaVote,
-	poaWhitelist,
 
 	// misc
-	transfer,
-	info
+	poaWhitelist,
+	transfer
 } from 'evm-lite-cli';
 
 // custom commands
 import version from './cmd/version';
 
-const params: IInit = {
+// babble
+import block from './cmd/block';
+
+const params: ICLIConfig = {
 	name: 'Monet CLI',
 	delimiter: 'monet',
 	datadir: osdatadir('Monet'),
-	config: 'monetcli'
+	config: 'monetcli',
+	consensus: 'babble'
 };
 
 const commands = [
@@ -51,7 +55,7 @@ const commands = [
 	configSet,
 	configView,
 
-	// pos
+	// poa
 	poaCheck,
 	poaInfo,
 	poaInit,
@@ -63,6 +67,9 @@ const commands = [
 	// misc
 	transfer,
 	info,
+
+	// babble
+	block,
 
 	version
 ];

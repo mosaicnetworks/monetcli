@@ -1,12 +1,8 @@
 import Vorpal, { Args, Command } from 'vorpal';
 
-import {
-	execute,
-	Frames,
-	IOptions,
-	IStagingFunction,
-	Session
-} from 'evm-lite-cli';
+import { execute, IOptions, Session, Staging } from 'evm-lite-cli';
+
+import Babble, { IBabbleBlock } from 'evm-lite-babble';
 
 import { BABBLE_BLOCK } from '../errors/babble';
 
@@ -20,7 +16,10 @@ export interface Arguments extends Args<Options> {
 	options: Options;
 }
 
-export default function command(monetcli: Vorpal, session: Session): Command {
+export default function command(
+	monetcli: Vorpal,
+	session: Session<Babble>
+): Command {
 	const description = 'Get a block from Babble';
 
 	return monetcli
@@ -36,18 +35,17 @@ export default function command(monetcli: Vorpal, session: Session): Command {
 		.action((args: Arguments) => execute(stage, args, session));
 }
 
-export const stage: IStagingFunction<Arguments, string, string> = async (
-	args: Arguments,
-	session: Session
-) => {
-	const frames = new Frames<Arguments, string, string>(session, args);
+export const stage = async (args: Arguments, session: Session<Babble>) => {
+	const staging = new Staging<Arguments, string>(args);
 
 	// args
 	const { options } = args;
 
 	// frames
-	const { debug, success, error } = frames.staging();
-	const { connect } = frames.generics();
+	const { debug, success, error } = staging.handlers(session.debug);
+
+	// hooks
+	const { connect } = staging.genericHooks(session);
 
 	// config
 	const config = session.datadir.config;
@@ -70,8 +68,6 @@ export const stage: IStagingFunction<Arguments, string, string> = async (
 
 	let block;
 
-	console.log(session.node.consensus);
-
 	try {
 		block = await session.node.consensus.getBlock(args.block);
 	} catch (e) {
@@ -79,5 +75,19 @@ export const stage: IStagingFunction<Arguments, string, string> = async (
 		return error(BABBLE_BLOCK.BLOCK_INDEX_EMPTY, e.toString());
 	}
 
-	return Promise.resolve(success(`${JSON.stringify(block)}`));
+	const parseTx = (tx: string): string => {
+		const buf = Buffer.from(tx, 'base64');
+
+		return buf.toString();
+	};
+
+	const b: IBabbleBlock = {
+		...block,
+		Body: {
+			...block.Body,
+			Transactions: block.Body.Transactions.map(parseTx)
+		}
+	};
+
+	return Promise.resolve(success(JSON.stringify(b, null, 2)));
 };

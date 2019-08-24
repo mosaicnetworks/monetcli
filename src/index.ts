@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import Babble from 'evm-lite-babble';
 
 import { ICLIConfig, init } from 'evm-lite-cli';
 import { osdatadir } from 'evm-lite-datadir';
@@ -39,8 +40,7 @@ const params: ICLIConfig = {
 	name: 'Monet CLI',
 	delimiter: 'monet',
 	datadir: osdatadir('Monet'),
-	config: 'monetcli',
-	consensus: 'babble'
+	config: 'monetcli'
 };
 
 const commands = [
@@ -74,4 +74,4 @@ const commands = [
 	version
 ];
 
-init(params, commands).catch(console.log);
+init(params, Babble, commands).catch(console.log);

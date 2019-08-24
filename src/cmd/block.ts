@@ -4,7 +4,7 @@ import Babble, { IBabbleBlock } from 'evm-lite-babble';
 
 import { execute, IOptions, Session, Staging } from 'evm-lite-cli';
 
-import { BABBLE_BLOCK } from '../errors/babble';
+import { BLOCK } from '../errors/babble';
 
 interface Options extends IOptions {
 	host?: string;
@@ -35,7 +35,7 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 	// args
 	const { options } = args;
 
-	// frames
+	// handlers
 	const { debug, success, error } = staging.handlers(session.debug);
 
 	// hooks
@@ -54,19 +54,18 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 	);
 
 	if (!args.block) {
-		return error(
-			BABBLE_BLOCK.BLOCK_INDEX_EMPTY,
-			'A block number must be specified'
+		return Promise.reject(
+			error(BLOCK.INDEX_EMPTY, 'A block number must be specified')
 		);
 	}
 
 	let block;
-
 	try {
 		block = await session.node.consensus.getBlock(args.block);
 	} catch (e) {
 		debug(e);
-		return error(BABBLE_BLOCK.BLOCK_INDEX_EMPTY, e.toString());
+
+		return Promise.reject(error(BLOCK.INDEX_EMPTY, e.toString()));
 	}
 
 	const parseTx = (tx: string): string => {
@@ -83,5 +82,5 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 		}
 	};
 
-	return Promise.resolve(success(JSON.stringify(b, null, 2)));
+	return success(JSON.stringify(b, null, 2));
 };

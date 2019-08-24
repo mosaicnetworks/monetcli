@@ -1,8 +1,8 @@
 import Vorpal, { Args, Command } from 'vorpal';
 
-import { execute, IOptions, Session, Staging } from 'evm-lite-cli';
-
 import Babble, { IBabbleBlock } from 'evm-lite-babble';
+
+import { execute, IOptions, Session, Staging } from 'evm-lite-cli';
 
 import { BABBLE_BLOCK } from '../errors/babble';
 
@@ -16,10 +16,7 @@ export interface Arguments extends Args<Options> {
 	options: Options;
 }
 
-export default function command(
-	monetcli: Vorpal,
-	session: Session<Babble>
-): Command {
+export default (monetcli: Vorpal, session: Session<Babble>): Command => {
 	const description = 'Get a block from Babble';
 
 	return monetcli
@@ -29,11 +26,8 @@ export default function command(
 		.option('-h, --host <ip>', 'override config host value')
 		.option('-p, --port <port>', 'override config port value')
 		.description(description)
-		.types({
-			string: []
-		})
 		.action((args: Arguments) => execute(stage, args, session));
-}
+};
 
 export const stage = async (args: Arguments, session: Session<Babble>) => {
 	const staging = new Staging<Arguments, string>(args);

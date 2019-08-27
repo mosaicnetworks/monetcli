@@ -1,9 +1,5 @@
 {
-	"extends": [
-		"tslint:recommended",
-		"tslint-config-prettier",
-		"tslint-config-airbnb"
-	],
+	"extends": ["tslint:recommended", "tslint-config-prettier"],
 	"linterOptions": {
 		"exclude": ["node_modules/**/*.ts"]
 	},
@@ -14,6 +10,7 @@
 		"object-literal-sort-keys": false,
 		"max-classes-per-file": false,
 		"ban-types": false,
-		"no-var-requires": false
+		"no-var-requires": false,
+		"no-empty-interface": false
 	}
 }

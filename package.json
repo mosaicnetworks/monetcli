@@ -1,6 +1,6 @@
 {
 	"name": "monetcli",
-	"version": "1.0.0-alpha.9",
+	"version": "1.0.0-alpha.10-dev",
 	"main": "index.js",
 	"license": "MIT",
 	"author": "Mosaic Networks",
@@ -25,17 +25,17 @@
 	"dependencies": {
 		"ascii-table": "^0.0.9",
 		"chalk": "^2.4.2",
-		"figlet": "^1.2.3",
-		"inquirer": "^6.4.1",
-		"mkdirp": "^0.5.1",
-		"vorpal": "^1.12.0",
+		"evm-lite-cli": "^1.0.0-alpha.25-dev",
 		"evm-lite-client": "^1.0.0-alpha.21-dev",
 		"evm-lite-consensus": "^1.0.0-alpha.21-dev",
 		"evm-lite-core": "^1.0.0-alpha.21-dev",
 		"evm-lite-datadir": "^1.0.0-alpha.21-dev",
 		"evm-lite-keystore": "^1.0.0-alpha.21-dev",
 		"evm-lite-utils": "^1.0.0-alpha.21-dev",
-		"evm-lite-cli": "^1.0.0-alpha.25-dev"
+		"figlet": "^1.2.3",
+		"inquirer": "^6.4.1",
+		"mkdirp": "^0.5.1",
+		"vorpal": "^1.12.0"
 	},
 	"devDependencies": {
 		"@types/figlet": "^1.2.0",

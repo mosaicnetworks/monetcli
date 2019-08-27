@@ -1,8 +1,7 @@
 import Vorpal, { Args, Command } from 'vorpal';
 
-import Babble, { IBabbleBlock } from 'evm-lite-babble';
-
 import { execute, IOptions, Session, Staging } from 'evm-lite-cli';
+import { Babble, IBabbleBlock } from 'evm-lite-consensus';
 
 import { BLOCK } from '../errors/babble';
 

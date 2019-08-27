@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import Babble from 'evm-lite-babble';
+import { Babble } from 'evm-lite-consensus';
 
 import { ICLIConfig, init } from 'evm-lite-cli';
 import { osdatadir } from 'evm-lite-datadir';

@@ -1,8 +1,7 @@
 import Vorpal, { Args, Command } from 'vorpal';
 
-import Babble from 'evm-lite-babble';
-
 import { execute, IOptions, Session, Staging } from 'evm-lite-cli';
+import { Babble } from 'evm-lite-consensus';
 
 const pkg = require('../../package.json');
 

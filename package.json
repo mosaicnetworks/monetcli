@@ -17,9 +17,9 @@
 		"build": "tsc -p tsconfig.json",
 		"build:watch": "npm run build --watch",
 		"test": "jest",
-		"dev": "yarn install --registry http://localhost:4873",
-		"publish:dev": "yarn publish --registry http://localhost:4873",
-		"add:dev": "yarn add --registry http://localhost:4873",
+		"dev": "yarn install --registry http://192.168.1.12:4873",
+		"publish:dev": "yarn publish --registry http://192.168.1.12:4873",
+		"add:dev": "yarn add --registry http://192.168.1.12:4873",
 		"i": "ts-node src/index i --debug"
 	},
 	"dependencies": {

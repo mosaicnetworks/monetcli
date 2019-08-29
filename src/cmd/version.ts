@@ -38,6 +38,9 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 	debug(`evm-lite-core: ${pkg.dependencies[`evm-lite-core`]}`);
 	debug(`evm-lite-keystore: ${pkg.dependencies[`evm-lite-keystore`]}`);
 	debug(`evm-lite-datadir: ${pkg.dependencies[`evm-lite-datadir`]}`);
+	debug(`evm-lite-utils: ${pkg.dependencies[`evm-lite-utils`]}`);
+	debug(`evm-lite-consensus: ${pkg.dependencies[`evm-lite-consensus`]}`);
+	debug(`evm-lite-client: ${pkg.dependencies[`evm-lite-client`]}`);
 	debug(`evm-lite-cli: ${pkg.dependencies[`evm-lite-cli`]}`);
 
 	return Promise.resolve(success(`monetcli ${pkg.version}`));

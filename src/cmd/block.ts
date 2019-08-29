@@ -52,7 +52,7 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 		port
 	);
 
-	if (!args.block) {
+	if (args.block === null || args.block === undefined) {
 		return Promise.reject(
 			error(BLOCK.INDEX_EMPTY, 'A block number must be specified')
 		);
@@ -64,7 +64,7 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 	} catch (e) {
 		debug(e);
 
-		return Promise.reject(error(BLOCK.INDEX_EMPTY, e.toString()));
+		return Promise.reject(error(BLOCK.INDEX_EMPTY, 'Block not found'));
 	}
 
 	const parseTx = (tx: string): string => {
@@ -76,8 +76,8 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 	const b: IBabbleBlock = {
 		...block,
 		Body: {
-			...block.Body,
-			Transactions: block.Body.Transactions.map(parseTx)
+			...block.Body
+			// Transactions: block.Body.Transactions.map(parseTx)
 		}
 	};
 

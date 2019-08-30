@@ -1366,76 +1366,76 @@ ethjs-unit@^0.1.6:
     bn.js "4.11.6"
     number-to-bn "1.7.0"
 
-evm-lite-cli@^1.0.0-dev:
-  version "1.0.0-dev"
-  resolved "http://192.168.1.4:4873/evm-lite-cli/-/evm-lite-cli-1.0.0-dev.tgz#dfe82f6a5d22390ceeddd9a522d2b3ef94c677d0"
-  integrity sha512-En5p8+UVU6LpVwH1z2htBSggeyE/2TOZ4K/IF27MZExL6XkbuCGQ5F3wUyPSUy2sFz9IymIFmbYsYdg8Rq6AHA==
+evm-lite-cli@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.0.1.tgz#e67db4a676740f0b1e49a43f1abeb4a0360f7018"
+  integrity sha512-lQ1kgM2KwZ4sF4ho0w2I4bJo05NJUquqWAJ0BCilgyMq2getjfmxo1rVuXyXlIyBJ+mdberMyGsFOcI9o4iyXA==
   dependencies:
     ascii-table "^0.0.9"
     chalk "^2.4.2"
     dotenv "^8.0.0"
-    evm-lite-client "^1.0.0-dev"
-    evm-lite-consensus "^1.0.0-dev"
-    evm-lite-core "^1.0.0-dev"
-    evm-lite-datadir "^1.0.0-dev"
-    evm-lite-keystore "^1.0.0-dev"
-    evm-lite-utils "^1.0.0-dev"
+    evm-lite-client "^1.0.0"
+    evm-lite-consensus "^1.0.0"
+    evm-lite-core "^1.0.0"
+    evm-lite-datadir "^1.0.0"
+    evm-lite-keystore "^1.0.0"
+    evm-lite-utils "^1.0.0"
     figlet "^1.2.3"
     inquirer "^6.4.1"
     mkdirp "^0.5.1"
     vorpal "^1.12.0"
 
-evm-lite-client@1.0.0-dev, evm-lite-client@^1.0.0-dev:
-  version "1.0.0-dev"
-  resolved "http://192.168.1.4:4873/evm-lite-client/-/evm-lite-client-1.0.0-dev.tgz#0dd560ac0b270b5cf89e6552767b551e6162d30c"
-  integrity sha512-f57PB8OL0loIVzp2qv/2n7wczG0C+kRX6QazbFkJk7drAdzlTHzhPb73+ychxE2lFuJX8jIeH0Zp0TQ/+BeYvA==
+evm-lite-client@1.0.0, evm-lite-client@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/evm-lite-client/-/evm-lite-client-1.0.0.tgz#9b5d39a45b2084a2d5224a79eb46188e007ad8e9"
+  integrity sha512-1Gk9h6p2qw/B22/yM1fHVxqcSZnW1v9EB+9VxPDKFdqlA09IYn+aPYCN4fT/Fii+VVWqozRCY3k7z3awTXA/BA==
   dependencies:
     json-bigint "^0.3.0"
 
-evm-lite-consensus@1.0.0-dev, evm-lite-consensus@^1.0.0-dev:
-  version "1.0.0-dev"
-  resolved "http://192.168.1.4:4873/evm-lite-consensus/-/evm-lite-consensus-1.0.0-dev.tgz#8bc49cb540c8c3780a6dc6dccd6b14c646b1b699"
-  integrity sha512-KgD+DP/g34xLLORMy/oXepTpp2J/j+Q7j8udyodNanHa/N+RxsUxPxLcIw+uwfcfNW63tWdIVVzIENKb/9Bx/g==
+evm-lite-consensus@1.0.0, evm-lite-consensus@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/evm-lite-consensus/-/evm-lite-consensus-1.0.0.tgz#d7af6886d156e40dcc1259f59273500080e8788e"
+  integrity sha512-IQIyXpJ7klKSIw3UFdHpjt7cTw1ZF0vOTab2IqRJKL5H6XA6GyPJJZwuUL3J2n9inX3UvnPqwoUYzFdjIOw6lg==
   dependencies:
-    evm-lite-client "1.0.0-dev"
+    evm-lite-client "1.0.0"
     json-bigint "^0.3.0"
 
-evm-lite-core@1.0.0-dev, evm-lite-core@^1.0.0-dev:
-  version "1.0.0-dev"
-  resolved "http://192.168.1.4:4873/evm-lite-core/-/evm-lite-core-1.0.0-dev.tgz#c27a025403cd0d2fd786d26c5a85fd0a0b9a12b3"
-  integrity sha512-R+VjGz9S8aIMn+cmeMjEvKU4Pa2zpw6Bq8u2dAgwcI6fxqxeErH5hMJ1Q+gZ4fGqZuOxxkZqZBTdOn8DM+ee2w==
+evm-lite-core@1.0.0, evm-lite-core@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/evm-lite-core/-/evm-lite-core-1.0.0.tgz#63749fc34a8f7bec54d856a5189385255b3a6bdc"
+  integrity sha512-fVVmn3i4Tj+DSjAcT0H+3HHTvU+f0FBo2ElrvVj2HDolrvACTuL3SOm/W34Png2HNH3TLxb3mveVc+4CgJadZw==
   dependencies:
     eth-lib "0.2.8"
-    evm-lite-client "1.0.0-dev"
-    evm-lite-consensus "1.0.0-dev"
-    evm-lite-utils "1.0.0-dev"
+    evm-lite-client "1.0.0"
+    evm-lite-consensus "1.0.0"
+    evm-lite-utils "1.0.0"
     json-bigint "^0.3.0"
     web3 "0.20.6"
     web3-eth-iban "1.0.0-beta.46"
     web3-utils "1.0.0-beta.46"
 
-evm-lite-datadir@^1.0.0-dev:
-  version "1.0.0-dev"
-  resolved "http://192.168.1.4:4873/evm-lite-datadir/-/evm-lite-datadir-1.0.0-dev.tgz#debbbd79f97cda64d88b082fe952df941ea4f8a1"
-  integrity sha512-Z5wUjM/WIuKERYDwwAuvtMw3wITCJpe0+jdxroCYp77qjXcOG9Sx7HYTiKLAIWh6pXaLJJVQB6r8tps8eH9Fkg==
+evm-lite-datadir@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/evm-lite-datadir/-/evm-lite-datadir-1.0.0.tgz#73ee1cf7f8dd5f02b725c9af04e923648a6a0638"
+  integrity sha512-4dwbF781t26V4Q3xlA53lS0QGLtejpSHvuw+P0n0vsqTA1dUqDBIv6FASE884J/oGOsRcHtaMA9SGu5083dYcQ==
   dependencies:
-    evm-lite-keystore "1.0.0-dev"
-    evm-lite-utils "1.0.0-dev"
+    evm-lite-keystore "1.0.0"
+    evm-lite-utils "1.0.0"
     mkdirp "^0.5.1"
     toml "^3.0.0"
     tomlify-j0.4 "^3.0.0"
 
-evm-lite-keystore@1.0.0-dev, evm-lite-keystore@^1.0.0-dev:
-  version "1.0.0-dev"
-  resolved "http://192.168.1.4:4873/evm-lite-keystore/-/evm-lite-keystore-1.0.0-dev.tgz#01ee15081466e0f2ff966e72b6805acdae735103"
-  integrity sha512-keM4znV21DhzFTT2kW2nTqkJznXxwMpgWtWnrocjvky8iNvng5ctyuq5wST75ooUlnCCzoQLUMUXQEl4trGwng==
+evm-lite-keystore@1.0.0, evm-lite-keystore@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/evm-lite-keystore/-/evm-lite-keystore-1.0.0.tgz#65a448ae10133fe4dcc3c0d5944260921086a418"
+  integrity sha512-4lH2/A77ngmrDHFu5D9JYleqTTswD1xQsKIB2p4tdvbtFpT1i/U+hxFAkjDSj47L+NyLA2+R9pADkqw9/6t1gQ==
   dependencies:
     browserify-cipher "^1.0.1"
     crypto-random-hex "^1.0.0"
     eth-lib "^0.2.8"
-    evm-lite-client "1.0.0-dev"
-    evm-lite-core "1.0.0-dev"
-    evm-lite-utils "1.0.0-dev"
+    evm-lite-client "1.0.0"
+    evm-lite-core "1.0.0"
+    evm-lite-utils "1.0.0"
     json-bigint "0.3.0"
     keccak256 "^1.0.0"
     mkdirp "^0.5.1"
@@ -1444,10 +1444,10 @@ evm-lite-keystore@1.0.0-dev, evm-lite-keystore@^1.0.0-dev:
     scryptsy "^2.1.0"
     uuid "^3.3.3"
 
-evm-lite-utils@1.0.0-dev, evm-lite-utils@^1.0.0-dev:
-  version "1.0.0-dev"
-  resolved "http://192.168.1.4:4873/evm-lite-utils/-/evm-lite-utils-1.0.0-dev.tgz#55f8210661f74c53ba287dbed1b838a96ba78602"
-  integrity sha512-oE1SOiTsi7VipdAdjWrg2ttS4+p79coFhQByDlafl3IDqGJDtfhHlrIQWVS6esqC9XjGHH1gVl6fMbsbo44MjA==
+evm-lite-utils@1.0.0, evm-lite-utils@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/evm-lite-utils/-/evm-lite-utils-1.0.0.tgz#706e9c755e65066e8ab48c32af499ccfb32aed83"
+  integrity sha512-wDJ2OeXroLYdVEcrPppJ3aOXw+mp0td9ywYxoXu7a9oijE+mwC3JRHbydNAotNm57SOq8bsxLY6QaWIS317KSA==
   dependencies:
     mkdirp "^0.5.1"
 

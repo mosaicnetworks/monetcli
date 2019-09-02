@@ -11,3 +11,4 @@ tests/assets/monetcli.toml
 tests/assets/wallet.toml
 yarn-error.log
 ./scripts
+bin

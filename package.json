@@ -20,7 +20,8 @@
 		"dev": "yarn install --registry http://192.168.1.4:4873",
 		"publish:dev": "yarn publish --registry http://192.168.1.4:4873",
 		"add:dev": "yarn add --registry http://192.168.1.4:4873",
-		"i": "ts-node src/index i --debug"
+		"i": "ts-node src/index i --debug",
+		"pkg": "pkg . --out-path ./bin"
 	},
 	"dependencies": {
 		"ascii-table": "^0.0.9",
@@ -57,5 +58,11 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/mosaicnetworks/monetcli.git"
+	},
+	"pkg": {
+		"assets": [
+			"./node_modules/figlet/fonts/Standard.flf"
+		],
+		"out-path": "./bin"
 	}
 }

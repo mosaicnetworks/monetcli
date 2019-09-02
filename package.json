@@ -13,7 +13,7 @@
 	],
 	"scripts": {
 		"prepublish": "npm run build",
-		"clean": "rm -rf node_modules && rm -rf dist/ && rm -rf package-lock.json",
+		"clean": "rm -rf node_modules dist bin package-lock.json",
 		"build": "tsc -p tsconfig.json",
 		"build:watch": "npm run build --watch",
 		"test": "jest",

@@ -1528,6 +1528,17 @@ evm-lite-datadir@1.1.0-dev:
     toml "^3.0.0"
     tomlify-j0.4 "^3.0.0"
 
+evm-lite-datadir@1.1.0-dev.2:
+  version "1.1.0-dev.2"
+  resolved "http://192.168.1.4:4873/evm-lite-datadir/-/evm-lite-datadir-1.1.0-dev.2.tgz#ff01583bc2ffe8e7d92955e3afb833b7da59b20a"
+  integrity sha512-dH7sr1m338rur79FLJEcmxXbc0mbQWyPJH09r+loGocR2JKHo6Ig0oJdTprtZ0edz1dK3pYp06D+fjlNsZzj8w==
+  dependencies:
+    evm-lite-keystore "1.1.0-dev.2"
+    evm-lite-utils "1.1.0-dev"
+    mkdirp "^0.5.1"
+    toml "^3.0.0"
+    tomlify-j0.4 "^3.0.0"
+
 evm-lite-keystore@1.1.0-dev:
   version "1.1.0-dev"
   resolved "http://192.168.1.4:4873/evm-lite-keystore/-/evm-lite-keystore-1.1.0-dev.tgz#4beb1ca82a256375cb20b8a85179d3102aaa9a41"
@@ -1545,6 +1556,23 @@ evm-lite-keystore@1.1.0-dev:
     randombytes "^2.1.0"
     scrypt "6.0.3"
     scryptsy "^2.1.0"
+    uuid "^3.3.3"
+
+evm-lite-keystore@1.1.0-dev.2:
+  version "1.1.0-dev.2"
+  resolved "http://192.168.1.4:4873/evm-lite-keystore/-/evm-lite-keystore-1.1.0-dev.2.tgz#23ef586998157211c2d2b6ae064298d8be9827b0"
+  integrity sha512-SA980z1IInhQh3Ynu5D9jIAGyWhoKr7Jip+9Z5GmmRl3PTpfnLcTIYHrTdegBFuxDAK1XnI8z223+D5x7Po2DA==
+  dependencies:
+    browserify-cipher "^1.0.1"
+    crypto-random-hex "^1.0.0"
+    eth-lib "^0.2.8"
+    evm-lite-client "1.1.0-dev"
+    evm-lite-core "1.1.0-dev"
+    evm-lite-utils "1.1.0-dev"
+    json-bigint "0.3.0"
+    keccak256 "^1.0.0"
+    mkdirp "^0.5.1"
+    randombytes "^2.1.0"
     uuid "^3.3.3"
 
 evm-lite-utils@1.1.0-dev:

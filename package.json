@@ -1,6 +1,6 @@
 {
 	"name": "monetcli",
-	"version": "1.0.1",
+	"version": "1.0.1-dev",
 	"main": "index.js",
 	"license": "MIT",
 	"author": "Mosaic Networks",

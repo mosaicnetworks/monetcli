@@ -60,7 +60,7 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 
 	let block;
 	try {
-		block = await session.node.consensus.getBlock(args.block);
+		block = await session.node.consensus!.getBlock(args.block);
 	} catch (e) {
 		debug(e);
 
@@ -68,6 +68,7 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 	}
 
 	const parseTx = (tx: string): string => {
+		// conver to hex
 		const buf = Buffer.from(tx, 'base64');
 
 		return buf.toString();
@@ -76,8 +77,8 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 	const b: IBabbleBlock = {
 		...block,
 		Body: {
-			...block.Body
-			// Transactions: block.Body.Transactions.map(parseTx)
+			...block.Body,
+			Transactions: block.Body.Transactions.map(parseTx)
 		}
 	};
 

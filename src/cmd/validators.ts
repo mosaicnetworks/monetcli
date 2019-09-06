@@ -11,16 +11,15 @@ interface Options extends IOptions {
 }
 
 export interface Arguments extends Args<Options> {
-	block?: number;
+	round?: number;
 	options: Options;
 }
 
 export default (monetcli: Vorpal, session: Session<Babble>): Command => {
-	const description = 'Get a block from Babble';
+	const description = 'Get validators by round';
 
 	return monetcli
-		.command('block [block]')
-		.alias('b')
+		.command('validators [round]')
 		.option('-d, --debug', 'show debug output')
 		.option('-h, --host <ip>', 'override config host value')
 		.option('-p, --port <port>', 'override config port value')
@@ -52,35 +51,20 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 		port
 	);
 
-	if (args.block === null || args.block === undefined) {
+	if (args.round === null || args.round === undefined) {
 		return Promise.reject(
-			error(BLOCK.INDEX_EMPTY, 'A block number must be specified')
+			error(BLOCK.INDEX_EMPTY, 'A round number must be specified')
 		);
 	}
 
-	let block;
+	let validators;
 	try {
-		block = await session.node.consensus!.getBlock(args.block);
+		validators = await session.node.consensus!.getValidators(args.round);
 	} catch (e) {
 		debug(e);
 
-		return Promise.reject(error(BLOCK.INDEX_EMPTY, 'Block not found'));
+		return Promise.reject(error(BLOCK.INDEX_EMPTY, 'Validators not found'));
 	}
 
-	const parseTx = (tx: string): string => {
-		// conver to hex
-		const buf = Buffer.from(tx, 'base64');
-
-		return buf.toString();
-	};
-
-	const b: IBabbleBlock = {
-		...block,
-		Body: {
-			...block.Body,
-			Transactions: block.Body.Transactions.map(parseTx)
-		}
-	};
-
-	return success(JSON.stringify(b, null, 2));
+	return success(JSON.stringify(validators, null, 2));
 };

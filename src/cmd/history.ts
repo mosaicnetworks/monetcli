@@ -11,16 +11,15 @@ interface Options extends IOptions {
 }
 
 export interface Arguments extends Args<Options> {
-	block?: number;
 	options: Options;
 }
 
 export default (monetcli: Vorpal, session: Session<Babble>): Command => {
-	const description = 'Get a block from Babble';
+	const description = 'Get validators entire history';
 
 	return monetcli
-		.command('block [block]')
-		.alias('b')
+		.command('history')
+		.alias('h')
 		.option('-d, --debug', 'show debug output')
 		.option('-h, --host <ip>', 'override config host value')
 		.option('-p, --port <port>', 'override config port value')
@@ -52,35 +51,13 @@ export const stage = async (args: Arguments, session: Session<Babble>) => {
 		port
 	);
 
-	if (args.block === null || args.block === undefined) {
-		return Promise.reject(
-			error(BLOCK.INDEX_EMPTY, 'A block number must be specified')
-		);
-	}
-
-	let block;
+	let history;
 	try {
-		block = await session.node.consensus!.getBlock(args.block);
+		history = await session.node.consensus!.getValidatorHistory();
 	} catch (e) {
 		debug(e);
-
 		return Promise.reject(error(BLOCK.INDEX_EMPTY, 'Block not found'));
 	}
 
-	const parseTx = (tx: string): string => {
-		// conver to hex
-		const buf = Buffer.from(tx, 'base64');
-
-		return buf.toString();
-	};
-
-	const b: IBabbleBlock = {
-		...block,
-		Body: {
-			...block.Body,
-			Transactions: block.Body.Transactions.map(parseTx)
-		}
-	};
-
-	return success(JSON.stringify(b, null, 2));
+	return success(JSON.stringify(history, null, 2));
 };

@@ -35,6 +35,8 @@ import version from './cmd/version';
 
 // babble
 import block from './cmd/block';
+import history from './cmd/history';
+import validators from './cmd/validators';
 
 const params: ICLIConfig = {
 	name: 'Monet CLI',
@@ -70,6 +72,8 @@ const commands = [
 
 	// babble
 	block,
+	history,
+	validators,
 
 	version
 ];

@@ -29,6 +29,7 @@ import {
 
 // custom commands
 import block from './commands/block';
+import history from './commands/history';
 import validators from './commands/validators';
 import version from './commands/version';
 
@@ -66,7 +67,8 @@ const commands = [
 	// custom
 	version,
 	block,
-	validators
+	validators,
+	history
 ];
 
 init(params, commands).catch(console.log);

@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import { Babble } from 'evm-lite-consensus';
-
 import { ICLIConfig, init } from 'evm-lite-cli';
 import { osdatadir } from 'evm-lite-datadir';
 
@@ -19,7 +17,6 @@ import {
 	// pos
 	info,
 	poaCheck,
-	poaInfo,
 	poaInit,
 	poaNominate,
 	poaNomineelist,
@@ -31,16 +28,13 @@ import {
 } from 'evm-lite-cli';
 
 // custom commands
-import version from './cmd/version';
-
-// babble
-import block from './cmd/block';
-import history from './cmd/history';
-import validators from './cmd/validators';
+import block from './commands/block';
+import validators from './commands/validators';
+import version from './commands/version';
 
 const params: ICLIConfig = {
 	name: 'Monet CLI',
-	delimiter: 'monet',
+	delimiter: 'monetcli',
 	datadir: osdatadir('Monet'),
 	config: 'monetcli'
 };
@@ -59,7 +53,6 @@ const commands = [
 
 	// poa
 	poaCheck,
-	poaInfo,
 	poaInit,
 	poaNominate,
 	poaNomineelist,
@@ -70,12 +63,10 @@ const commands = [
 	transfer,
 	info,
 
-	// babble
+	// custom
+	version,
 	block,
-	history,
-	validators,
-
-	version
+	validators
 ];
 
-init(params, Babble, commands).catch(console.log);
+init(params, commands).catch(console.log);

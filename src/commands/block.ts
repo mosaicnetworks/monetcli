@@ -1,6 +1,6 @@
 import Vorpal from 'vorpal';
 
-import { color, Command, IArgs, IOptions, Session } from 'evm-lite-cli';
+import { Command, IArgs, IOptions, Session } from 'evm-lite-cli';
 import { Babble } from 'evm-lite-consensus';
 import { Monet } from 'evm-lite-core';
 
@@ -49,13 +49,13 @@ class BlockCommand extends Command<Args, Babble> {
 		return;
 	}
 
-	protected async exec(): Promise<void> {
+	protected async exec(): Promise<string> {
 		const { host, port } = this.args.options;
 		this.log.http('GET', `${host}:${port}/block/${this.args.block}`);
 
 		const block = await this.node!.consensus!.getBlock(this.args.block);
 
-		return color.green(JSON.stringify(block, null, 2));
+		return JSON.stringify(block, null, 2);
 	}
 }
 

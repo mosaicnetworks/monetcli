@@ -36,7 +36,7 @@
 		"evm-lite-core": "^1.3.2",
 		"evm-lite-datadir": "^1.3.3",
 		"evm-lite-keystore": "^1.3.2",
-		"evm-lite-utils": "^1.3.3",
+		"evm-lite-utils": "^1.3.4",
 		"figlet": "^1.2.4",
 		"inquirer": "^7.0.0",
 		"mkdirp": "^0.5.1",

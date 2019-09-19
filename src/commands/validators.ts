@@ -1,7 +1,6 @@
-import Table from 'cli-table';
 import Vorpal from 'vorpal';
 
-import { color, Command, IArgs, IOptions, Session } from 'evm-lite-cli';
+import { color, Command, IArgs, IOptions, Session, Table } from 'evm-lite-cli';
 import { Babble } from 'evm-lite-consensus';
 import { Monet } from 'evm-lite-core';
 
@@ -51,7 +50,7 @@ class ValidatorsCommand extends Command<Args, Babble> {
 		return;
 	}
 
-	protected async exec(): Promise<void> {
+	protected async exec(): Promise<string> {
 		const { host, port } = this.args.options;
 		this.log.http('GET', `${host}:${port}/validators/${this.args.round}`);
 
@@ -60,18 +59,16 @@ class ValidatorsCommand extends Command<Args, Babble> {
 		);
 
 		if (!this.args.options.formatted) {
-			return color.green(JSON.stringify(validators, null, 2));
+			return JSON.stringify(validators, null, 2);
 		}
 
-		const table = new Table({
-			head: ['Moniker', 'Net Address', 'Public Key Hex']
-		});
+		const table = new Table(['Moniker', 'Net Address', 'Public Key Hex']);
 
 		for (const val of validators) {
 			table.push([val.Moniker, val.NetAddr, val.PubKeyHex]);
 		}
 
-		return color.green(table.toString());
+		return table.toString();
 	}
 }
 

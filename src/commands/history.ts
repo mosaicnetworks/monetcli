@@ -45,13 +45,13 @@ class ValidatorHistoryCommand extends Command<Args, Babble> {
 		return;
 	}
 
-	protected async exec(): Promise<void> {
+	protected async exec(): Promise<string> {
 		const { host, port } = this.args.options;
 		this.log.http('GET', `${host}:${port}/history`);
 
 		const history = await this.node!.consensus!.getValidatorHistory();
 
-		return color.green(JSON.stringify(history, null, 2));
+		return JSON.stringify(history, null, 2);
 	}
 }
 

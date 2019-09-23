@@ -39,6 +39,7 @@ class VersionCommand extends Command {
 			'evm-lite-keystore',
 			pkg.dependencies[`evm-lite-keystore`]
 		);
+		this.log.info('evm-lite-cli', pkg.dependencies[`evm-lite-cli`]);
 		this.log.info('evm-lite-datadir', pkg.dependencies[`evm-lite-datadir`]);
 		this.log.info('evm-lite-utils', pkg.dependencies[`evm-lite-utils`]);
 		this.log.info('evm-lite-client', pkg.dependencies[`evm-lite-client`]);

@@ -1,6 +1,6 @@
 import Vorpal from 'vorpal';
 
-import { color, Command, IArgs, IOptions, Session } from 'evm-lite-cli';
+import { Arguments, Command, Options, Session } from 'evm-lite-cli';
 
 const pkg = require('../../package.json');
 
@@ -15,7 +15,7 @@ export default (monetcli: Vorpal, session: Session): Command => {
 		.types({
 			string: []
 		})
-		.action((args: IArgs<IOptions>) =>
+		.action((args: Arguments<Options>) =>
 			new VersionCommand(session, args).run()
 		);
 };

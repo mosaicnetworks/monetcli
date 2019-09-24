@@ -1,18 +1,18 @@
 import Vorpal from 'vorpal';
 
-import { color, Command, IArgs, IOptions, Session, Table } from 'evm-lite-cli';
+import { Arguments, Command, Options, Session, Table } from 'evm-lite-cli';
 import { Babble } from 'evm-lite-consensus';
 import { Monet } from 'evm-lite-core';
 
-interface Opts extends IOptions {
+type Opts = Options & {
 	formatted?: boolean;
 	host: string;
 	port: number;
-}
+};
 
-export interface Args extends IArgs<Opts> {
+export type Args = Arguments<Opts> & {
 	round: number;
-}
+};
 
 export default (monetcli: Vorpal, session: Session) => {
 	const description = 'Get validators by consensus round';

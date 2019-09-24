@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { ICLIConfig, init } from 'evm-lite-cli';
+import { CLIOptions, init } from 'evm-lite-cli';
 import { osdatadir } from 'evm-lite-datadir';
 
 import {
@@ -33,7 +33,7 @@ import history from './commands/history';
 import validators from './commands/validators';
 import version from './commands/version';
 
-const params: ICLIConfig = {
+const options: CLIOptions = {
 	name: 'Monet CLI',
 	delimiter: 'monetcli',
 	datadir: osdatadir('Monet'),
@@ -71,4 +71,4 @@ const commands = [
 	history
 ];
 
-init(params, commands).catch(console.log);
+init(options, commands).catch(console.log);

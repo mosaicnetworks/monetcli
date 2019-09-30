@@ -50,6 +50,8 @@ class BlockCommand extends Command<Args, Babble> {
 	}
 
 	protected async exec(): Promise<string> {
+		this.debug(`Fetching block -> ${this.args.block}`);
+
 		const { host, port } = this.args.options;
 		this.log.http('GET', `${host}:${port}/block/${this.args.block}`);
 

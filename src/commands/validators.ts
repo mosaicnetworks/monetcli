@@ -51,6 +51,8 @@ class ValidatorsCommand extends Command<Args, Babble> {
 	}
 
 	protected async exec(): Promise<string> {
+		this.debug(`Fetching validators for round -> ${this.args.round}`);
+
 		const { host, port } = this.args.options;
 		this.log.http('GET', `${host}:${port}/validators/${this.args.round}`);
 

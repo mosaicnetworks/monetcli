@@ -47,7 +47,7 @@ The locations are:
 -   Mac OS: `~/Library/MONET`
 -   Windows: `~/AppData/Roaming/MONET`
 
-**This directory is shared by [monetd](https://github.com/mosaicnetworks/monetd)**
+**This directory is shared by [monetd](https://github.com/mosaicnetworks/monetd).**
 
 In particular, `monetcli` creates the following:
 

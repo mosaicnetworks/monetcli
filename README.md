@@ -28,13 +28,13 @@ You can read more about `monetd` and how to get started in the documentation [he
 You can easily install `monetcli` with NPM
 
 ```bash
-npm install -g monetcli
+$ npm install -g monetcli
 ```
 
 or with `yarn`
 
 ```bash
-yarn global add monetcli
+$ yarn global add monetcli
 ```
 
 ## Data Directory
@@ -46,6 +46,8 @@ The locations are:
 -   Linux: `~/.monet`
 -   Mac OS: `~/Library/MONET`
 -   Windows: `~/AppData/Roaming/MONET`
+
+**This directory is also shared by `monetd`.**
 
 In particular, `monetcli` creates the following:
 
@@ -75,8 +77,6 @@ In particular, `monetcli` creates the following:
     └── ...
     ```
 
-_This directory is shared by `monetd`._
-
 ### Modify Data Directory Path
 
 The global flag `-d, --datadir` specifies the directory where `keystore` and `monetcli.toml` which defaults to the paths defined above.
@@ -90,12 +90,12 @@ $ monetcli --datadir <path> <command>
 To change default configuration values run
 
 ```
-monetcli config set -i
+$ monetcli config set -i
 ```
 
 You will be taken to an interactive prompt to change connection and default values.
 
-```console
+```bash
 $ monetcli config set -i
 
 ? Host: 127.0.0.1

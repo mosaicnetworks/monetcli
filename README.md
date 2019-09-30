@@ -11,6 +11,8 @@ A CLI wallet to interact with the Monet Hub.
 1. [Overview](#overview)
 2. [Installation](#installation)
 3. [Data Directory](#data-directory)
+    - [Modify Data Directory Path](#modify-data-directory-path)
+    - [Configuration](#Configuration)
 4. [Proof of Authority](#proof-of-authority)
 
 ## Overview
@@ -74,6 +76,14 @@ In particular, `monetcli` creates the following:
     ```
 
 _This directory is shared by `monetd`._
+
+### Modify Data Directory Path
+
+The global flag `-d, --datadir` specifies the directory where `keystore` and `monetcli.toml` which defaults to the paths defined above.
+
+```bash
+$ monetcli --datadir <path> <command>
+```
 
 ### Configuration
 

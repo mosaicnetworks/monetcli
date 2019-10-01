@@ -19,9 +19,9 @@
     js-tokens "^4.0.0"
 
 "@babel/runtime@^7.3.1":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.0.tgz#4fc1d642a9fd0299754e8b5de62c631cf5568205"
-  integrity sha512-89eSBLJsxNxOERC0Op4vd+0Bqm6wRMqMbFtV3i0/fbaWw/mJ8Q3eBvgX0G4SyrOOLCtbu98HspF8o09MRT+KzQ==
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.2.tgz#c3d6e41b304ef10dcf13777a33e7694ec4a9a6dd"
+  integrity sha512-EXxN64agfUqqIGeEjI5dL5z0Sw0ZwWo1mLTi4mQowCZ42O59b7DRpZAnTC6OqdF28wMBMFKNb/4uFGrVaigSpg==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -70,14 +70,14 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@^12.7.5":
-  version "12.7.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.5.tgz#e19436e7f8e9b4601005d73673b6dc4784ffcc2f"
-  integrity sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+  version "12.7.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.8.tgz#cb1bf6800238898bc2ff6ffa5702c3cadd350708"
+  integrity sha512-FMdVn84tJJdV+xe+53sYiZS4R5yn1mAIxfj+DVoNiQjTYz1+OYmjwEZr1ev9nU0axXwda0QDbYl06QHanRVH3A==
 
 "@types/node@^10.12.18":
-  version "10.14.18"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.18.tgz#b7d45fc950e6ffd7edc685e890d13aa7b8535dce"
-  integrity sha512-ryO3Q3++yZC/+b8j8BdKd/dn9JlzlHBPdm80656xwYUdmPkpTGTjkAdt6BByiNupGPE8w0FhBgvYy/fX9hRNGQ==
+  version "10.14.19"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.19.tgz#f52742c7834a815dedf66edfc8a51547e2a67342"
+  integrity sha512-j6Sqt38ssdMKutXBUuAcmWF8QtHW1Fwz/mz4Y+Wd9mzpBiVFirjpNQf363hG5itkG+yGaD+oiLyb50HxJ36l9Q==
 
 "@types/npmlog@^4.1.2":
   version "4.1.2"
@@ -381,9 +381,9 @@ colors@1.0.3:
   integrity sha1-BDP0TYCWgP3rYO0mDxsMJi6CpAs=
 
 commander@^2.12.1:
-  version "2.20.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
-  integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.1.tgz#3863ce3ca92d0831dcf2a102f5fb4b5926afd0f9"
+  integrity sha512-cCuLsMhJeWQ/ZpsFTbE765kvVfoeSddc4nU3up4fV+fDBcfUXnbITJ+JzhkdjzOqhURjZgujxaioam4RM9yGUg==
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -563,10 +563,10 @@ ethjs-unit@^0.1.6:
     bn.js "4.11.6"
     number-to-bn "1.7.0"
 
-evm-lite-cli@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.2.1.tgz#1f9f9ffb64d803af66da14cc837eeb8c6cb26773"
-  integrity sha512-gktf7b0QA0tHeTIgJcyfwekzQQ5NI3G08qPwa3SKDIAJr39r2SiHm2zECnBCceDv7i0ctE0d/Y3eH/E5LlqHDQ==
+evm-lite-cli@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.2.2.tgz#18ed2f49d55e3da1340416a803ae33da4360cc40"
+  integrity sha512-PDZuL4Q/nGreifa6o850ig2uc9TYgjVjNw78PN4ijmVDyTB/pKJG/0L1CaPKcJK7xzSZsKxBigY2QlOa+RIJBA==
   dependencies:
     chalk "^2.4.2"
     cli-table "^0.3.1"

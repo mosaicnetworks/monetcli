@@ -1,6 +1,6 @@
 import Vorpal from 'vorpal';
 
-import { color, Command, IArgs, IOptions, Session } from 'evm-lite-cli';
+import { Arguments, Command, Options, Session } from 'evm-lite-cli';
 
 const pkg = require('../../package.json');
 
@@ -15,7 +15,7 @@ export default (monetcli: Vorpal, session: Session): Command => {
 		.types({
 			string: []
 		})
-		.action((args: IArgs<IOptions>) =>
+		.action((args: Arguments<Options>) =>
 			new VersionCommand(session, args).run()
 		);
 };
@@ -34,19 +34,18 @@ class VersionCommand extends Command {
 	}
 
 	protected async exec(): Promise<string> {
-		this.log.info('evm-lite-core', pkg.dependencies[`evm-lite-core`]);
-		this.log.info(
+		const modules: string[] = [
+			'evm-lite-core',
+			'evm-lite-datadir',
 			'evm-lite-keystore',
-			pkg.dependencies[`evm-lite-keystore`]
-		);
-		this.log.info('evm-lite-cli', pkg.dependencies[`evm-lite-cli`]);
-		this.log.info('evm-lite-datadir', pkg.dependencies[`evm-lite-datadir`]);
-		this.log.info('evm-lite-utils', pkg.dependencies[`evm-lite-utils`]);
-		this.log.info('evm-lite-client', pkg.dependencies[`evm-lite-client`]);
-		this.log.info(
 			'evm-lite-consensus',
-			pkg.dependencies[`evm-lite-consensus`]
-		);
+			'evm-lite-client',
+			'evm-lite-cli'
+		];
+
+		for (const mod of modules) {
+			this.debug(`${mod}: ${pkg.dependencies[mod]}`, 'version');
+		}
 
 		return `v${pkg.version}`;
 	}

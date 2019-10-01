@@ -1,17 +1,17 @@
 import Vorpal from 'vorpal';
 
-import { Command, IArgs, IOptions, Session } from 'evm-lite-cli';
+import { Arguments, Command, Options, Session } from 'evm-lite-cli';
 import { Babble } from 'evm-lite-consensus';
 import { Monet } from 'evm-lite-core';
 
-interface Opts extends IOptions {
+type Opts = Options & {
 	host: string;
 	port: number;
-}
+};
 
-export interface Args extends IArgs<Opts> {
+export type Args = Arguments<Opts> & {
 	block: number;
-}
+};
 
 export default (monetcli: Vorpal, session: Session) => {
 	const description = 'Display details of a block by index';
@@ -50,6 +50,8 @@ class BlockCommand extends Command<Args, Babble> {
 	}
 
 	protected async exec(): Promise<string> {
+		this.debug(`Fetching block -> ${this.args.block}`);
+
 		const { host, port } = this.args.options;
 		this.log.http('GET', `${host}:${port}/block/${this.args.block}`);
 

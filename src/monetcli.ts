@@ -8,6 +8,7 @@ import {
 	accountsGet,
 	accountsImport,
 	accountsList,
+	accountsPrivateKey,
 	accountsUpdate,
 
 	// config
@@ -17,10 +18,13 @@ import {
 	// pos
 	info,
 	poaCheck,
+	poaEvicteeList,
+	poaEvicteeNew,
+	poaEvicteeVote,
 	poaInit,
-	poaNominate,
-	poaNomineelist,
-	poaVote,
+	poaNomineeList,
+	poaNomineeNew,
+	poaNomineeVote,
 
 	// misc
 	poaWhitelist,
@@ -41,34 +45,37 @@ const options: CLIOptions = {
 };
 
 const commands = [
-	// accounts
-	accountsCreate,
-	accountsGet,
-	accountsList,
-	accountsUpdate,
-	accountsImport,
+	info,
 
-	// config
 	configSet,
 	configView,
 
-	// poa
-	poaCheck,
-	poaInit,
-	poaNominate,
-	poaNomineelist,
-	poaVote,
-	poaWhitelist,
+	accountsList,
+	accountsGet,
+	accountsCreate,
+	accountsUpdate,
+	accountsImport,
+	accountsPrivateKey,
 
-	// misc
 	transfer,
-	info,
 
-	// custom
-	version,
+	poaInit,
+	poaWhitelist,
+	poaCheck,
+
+	poaNomineeList,
+	poaNomineeNew,
+	poaNomineeVote,
+
+	poaEvicteeList,
+	poaEvicteeNew,
+	poaEvicteeVote,
+
 	block,
 	validators,
-	history
+	history,
+
+	version
 ];
 
 init(options, commands).catch(console.log);

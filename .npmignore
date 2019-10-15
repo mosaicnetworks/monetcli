@@ -9,3 +9,8 @@ pwd.txt
 .env
 docs
 .prettierrc
+__tests__
+.github
+e2e
+pwd.txt
+dist

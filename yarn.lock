@@ -319,7 +319,7 @@ cli-cursor@^1.0.1, cli-cursor@^1.0.2:
 
 cli-cursor@^2.1.0:
   version "2.1.0"
-  resolved "http://192.168.1.15:1234/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
+  resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
   integrity sha1-s12sN2R5+sw+lHR9QdDQ9SOP/LU=
   dependencies:
     restore-cursor "^2.0.0"
@@ -333,7 +333,7 @@ cli-cursor@^3.1.0:
 
 cli-spinners@^2.0.0:
   version "2.2.0"
-  resolved "http://192.168.1.15:1234/cli-spinners/-/cli-spinners-2.2.0.tgz#e8b988d9206c692302d8ee834e7a85c0144d8f77"
+  resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-2.2.0.tgz#e8b988d9206c692302d8ee834e7a85c0144d8f77"
   integrity sha512-tgU3fKwzYjiLEQgPMD9Jt+JjHVL9kW93FiIMX/l7rivvOD4/LL0Mf7gda3+4U2KJBloybwgj5KEoQgGRioMiKQ==
 
 cli-table@^0.3.1:
@@ -355,7 +355,7 @@ cli-width@^2.0.0:
 
 clone@^1.0.2:
   version "1.0.4"
-  resolved "http://192.168.1.15:1234/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
+  resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
 
 code-point-at@^1.0.0:
@@ -442,7 +442,7 @@ decompress-response@^3.3.0:
 
 defaults@^1.0.3:
   version "1.0.3"
-  resolved "http://192.168.1.15:1234/defaults/-/defaults-1.0.3.tgz#c656051e9817d9ff08ed881477f3fe4019f3ef7d"
+  resolved "https://registry.yarnpkg.com/defaults/-/defaults-1.0.3.tgz#c656051e9817d9ff08ed881477f3fe4019f3ef7d"
   integrity sha1-xlYFHpgX2f8I7YgUd/P+QBnz730=
   dependencies:
     clone "^1.0.2"
@@ -563,10 +563,10 @@ ethjs-unit@^0.1.6:
     bn.js "4.11.6"
     number-to-bn "1.7.0"
 
-evm-lite-cli@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.3.0.tgz#254307a4437545c5ff7b430d918956c4f90e0d27"
-  integrity sha512-0Fhb3Iv+XJ1dMvfTZKyX3A+FZG7lzug/XRJ9f5x+2DsuKJP9TVS2AWHgB+eHL2niTCD8A0lmhDW0C3bpZzgaLw==
+evm-lite-cli@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/evm-lite-cli/-/evm-lite-cli-1.4.0.tgz#f46325c7ffaf4236c749ef3e88a5abbd4192e6e8"
+  integrity sha512-ueTR7y50goEU9M9WcB8nh+cmBJtNquc9wWNH2k2vQMKSLNMJhm7MzZ+ErVlk5werh6Vj9rXJ0k2HfSDhaa4CJw==
   dependencies:
     chalk "^2.4.2"
     cli-table "^0.3.1"
@@ -997,7 +997,7 @@ lodash@^4.17.11, lodash@^4.17.15, lodash@^4.5.1:
 
 log-symbols@^2.2.0:
   version "2.2.0"
-  resolved "http://192.168.1.15:1234/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
+  resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
   integrity sha512-VeIAFslyIerEJLXHziedo2basKbMKtTw3vfn5IzG0XTjhAVEJyNHnL2p7vc+wBDSdQuUpNw3M2u6xb9QsAY5Eg==
   dependencies:
     chalk "^2.0.1"
@@ -1026,7 +1026,7 @@ md5.js@^1.3.4:
 
 mimic-fn@^1.0.0:
   version "1.2.0"
-  resolved "http://192.168.1.15:1234/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
+  resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
   integrity sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==
 
 mimic-fn@^2.1.0:
@@ -1152,7 +1152,7 @@ onetime@^1.0.0:
 
 onetime@^2.0.0:
   version "2.0.1"
-  resolved "http://192.168.1.15:1234/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
+  resolved "https://registry.yarnpkg.com/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
   integrity sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=
   dependencies:
     mimic-fn "^1.0.0"
@@ -1166,7 +1166,7 @@ onetime@^5.1.0:
 
 ora@^3.4.0:
   version "3.4.0"
-  resolved "http://192.168.1.15:1234/ora/-/ora-3.4.0.tgz#bf0752491059a3ef3ed4c85097531de9fdbcd318"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-3.4.0.tgz#bf0752491059a3ef3ed4c85097531de9fdbcd318"
   integrity sha512-eNwHudNbO1folBP3JsZ19v9azXWtQZjICdr3Q0TDPIaeBQ3mXLrh54wM+er0+hSp+dWKf+Z8KM58CYzEyIYxYg==
   dependencies:
     chalk "^2.4.2"
@@ -1294,7 +1294,7 @@ restore-cursor@^1.0.1:
 
 restore-cursor@^2.0.0:
   version "2.0.0"
-  resolved "http://192.168.1.15:1234/restore-cursor/-/restore-cursor-2.0.0.tgz#9f7ee287f82fd326d4fd162923d62129eee0dfaf"
+  resolved "https://registry.yarnpkg.com/restore-cursor/-/restore-cursor-2.0.0.tgz#9f7ee287f82fd326d4fd162923d62129eee0dfaf"
   integrity sha1-n37ih/gv0ybU/RYpI9YhKe7g368=
   dependencies:
     onetime "^2.0.0"
@@ -1654,7 +1654,7 @@ w-json@^1.3.5:
 
 wcwidth@^1.0.1:
   version "1.0.1"
-  resolved "http://192.168.1.15:1234/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
+  resolved "https://registry.yarnpkg.com/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
   integrity sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
   dependencies:
     defaults "^1.0.3"

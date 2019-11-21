@@ -70,7 +70,11 @@ class ValidatorsCommand extends Command<Args, Babble> {
 			table.push([val.Moniker, val.NetAddr, val.PubKeyHex]);
 		}
 
-		return table.toString();
+		if (this.args.options.json) {
+			return JSON.stringify(validators);
+		} else {
+			return table.toString();
+		}
 	}
 }
 

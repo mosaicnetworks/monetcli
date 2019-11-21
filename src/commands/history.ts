@@ -51,7 +51,11 @@ class ValidatorHistoryCommand extends Command<Args, Babble> {
 
 		const history = await this.node!.consensus!.getValidatorHistory();
 
-		return JSON.stringify(history, null, 2);
+		if (this.args.options.json) {
+			return JSON.stringify(history);
+		} else {
+			return JSON.stringify(history, null, 2);
+		}
 	}
 }
 

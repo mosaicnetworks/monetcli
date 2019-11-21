@@ -63,7 +63,7 @@ monetcli http GET camille.monet.network:8080/info
 
 ## Data Directory
 
-The first time `evmlc` runs, and if no options are specified, it creates a
+The first time `monetcli` runs, and if no options are specified, it creates a
 special directory in a default location, where it
 stores any relevant information.
 
@@ -73,14 +73,14 @@ stores any relevant information.
 
 In particular, this directory contains the following items:
 
--   **evmlc.toml**: where global options are specified
+-   **monetcli.toml**: where global options are specified
 -   **keystore**: where all encrypted account keys are stored
 
 **This directory is shared by [monetd](https://github.com/mosaicnetworks/monetd).**
 
-### `evmlc.toml`
+### `monetcli.toml`
 
-Example evmlc.toml:
+Example monetcli.toml:
 
 ```toml
 [connection]
@@ -110,11 +110,11 @@ gasPrice = 0
 
 _Note: `from` refers to the `moniker` of the account not the `address`._
 
-To change default configuration values run `evmlc config set -i` or `evmlc c s -i`. You will be
+To change default configuration values run `monetcli config set -i` or `monetcli c s -i`. You will be
 taken to an interactive prompt to change connection and default values.
 
 ```console
-$ evmlc config set -i
+$ monetcli config set -i
 
 ? Host: localhost
 ? Port: 8080

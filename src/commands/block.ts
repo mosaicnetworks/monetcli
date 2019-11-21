@@ -57,7 +57,11 @@ class BlockCommand extends Command<Args, Babble> {
 
 		const block = await this.node!.consensus!.getBlock(this.args.block);
 
-		return JSON.stringify(block, null, 2);
+		if (this.args.options.json) {
+			return JSON.stringify(block);
+		} else {
+			return JSON.stringify(block, null, 2);
+		}
 	}
 }
 
